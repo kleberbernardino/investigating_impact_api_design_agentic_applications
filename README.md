@@ -1,4 +1,4 @@
-# investigating_impact_api_design_agentic_applications
+# Investigating the Impact of API Design Techniques for Tools in Agentic Applications
 Investigating the Impact of API Design Techniques for Tools in Agentic Applications
 
 Prompt Engineering and Experimental Scenarios
