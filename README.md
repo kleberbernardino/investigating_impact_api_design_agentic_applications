@@ -1,7 +1,32 @@
 # Investigating the Impact of API Design Techniques for Tools in Agentic Applications
 Investigating the Impact of API Design Techniques for Tools in Agentic Applications
 
-Prompt Engineering and Experimental Scenarios
+## Implementation
+The experimental framework was implemented in Java to ensure strong typing, explicit tool schema definitions, and deterministic orchestration control. The implementation was structured around four main classes: BankToolsA, BankToolsB, OperationType, and Main. Together, these components form a modular architecture that separates the tool abstraction layer (BankToolsA/B), the model interaction layer (LangChain4J integration), and the experiment control layer (Main orchestration and validation) as detailed below.
+
+Four exposure configurations were evaluated: the first, CONF1, used only BankToolsA; the second, CONF2, used only BankToolsB; the third, CONF3, used BankToolsA followed by BankToolsB; and the fourth, CONF4, used BankToolsB followed by BankToolsA. CONF3 and CONF4 were designed to evaluate tool-selection bias introduced by declaration order.
+
+## Repository Structure
+
+```
+src/
+└── main/
+      └── java/
+           └── .../org.example/
+                 ├── BankToolsA.java
+                 ├── BankToolsB.java
+                 ├── OperationType.java
+                 └── Main.java
+└── pom.xml
+```
+
+## Requirements
+- Java 17+
+- Maven 4+
+- Ollama
+
+
+## Prompt Engineering and Experimental Scenarios
 
 Structured prompts were designed to explicitly define the execution order of operations, clearly specify the success and failure conditions for each step, eliminate ambiguity in rollback logic, and constrain the model’s reasoning space to reduce unintended behaviors. In total, three structured prompts were defined, with a system prompt set as the default message to eliminate variability caused by instruction changes. The system prompt was implemented as follows:
 
@@ -16,7 +41,7 @@ Only perform the required tool calls.
 
 --END--
 
-Prompt 1 - Conditional Transfer with Tax
+### Prompt 1 - Conditional Transfer with Tax
 
 Defines a conditional financial transfer operation that includes a transactional fee applied only upon successful completion. It establishes strict execution order and rollback rules to ensure atomicity, consistency, and controlled tool invocation behavior. This prompt can lead to the following scenarios:
 
@@ -37,7 +62,7 @@ If any operation fails:
   
 --END--
 
-Prompt 2 - Iterative Withdrawal with Conditional Aggregation
+### Prompt 2 - Iterative Withdrawal with Conditional Aggregation
 
 Specifies a controlled multi-step withdrawal process followed by a conditional aggregation, deposit, and proportional tax charge. It enforces sequential execution with early termination rules and ensures that only successfully completed operations are considered in the final financial reconciliation. This prompt can lead to the following scenarios:
 
@@ -61,7 +86,7 @@ If any withdrawal fails:
   
 --END--
 
-Prompt 3 - Dual Withdrawal with Atomic Consistency
+### Prompt 3 - Dual Withdrawal with Atomic Consistency
 
 Defines a sequential dual-withdrawal transaction followed by conditional aggregation and payment execution. It enforces strict dependency between operations and specifies rollback behavior to preserve financial consistency in the event of partial failure.
 
