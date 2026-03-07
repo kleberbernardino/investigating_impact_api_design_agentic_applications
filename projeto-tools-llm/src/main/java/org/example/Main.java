@@ -18,7 +18,7 @@ public class Main {
 
     private static final String OPENAI_MODEL_NAME = "mistral:7b";
 
-    private static final int EXECUTIONS_PER_SCENARIO = 1;
+    private static final int EXECUTIONS_PER_SCENARIO = 10;
 
     public class PromptBuilder {
 
