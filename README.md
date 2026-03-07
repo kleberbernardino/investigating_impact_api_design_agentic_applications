@@ -68,6 +68,12 @@ If any operation fails:
   
 --END--
 
+#### Expected Behavior
+The expected Behavior with BankToolsA for Scenario 1.A is: Withdraw(BC12345, 1000), Deposit(ND87632, 1000), and Taxes(BC12345, 1.5). The expected Behavior for Scenario 1.B is: Withdraw(BC12345, 1000), Deposit(ND87632, 1000) (Failure), and ReturnValue(BC12345, 1000).
+
+The expected Behavior with BankToolsB for Scenario 1.A is: executeOperation(WITHDRAW, BC12345, 1000), executeOperation(DEPOSIT, ND87632, 1000), and executeOperation(TAX, BC12345, 1.5). The expected Behavior for Scenario 1.B is: executeOperation(WITHDRAW, BC12345, 1000), executeOperation(DEPOSIT, ND87632, 1000) (Failure), and executeOperation(RETURN, BC12345, 1000).
+
+
 ### Prompt 2 - Iterative Withdrawal with Conditional Aggregation
 
 Specifies a controlled multi-step withdrawal process followed by a conditional aggregation, deposit, and proportional tax charge. It enforces sequential execution with early termination rules and ensures that only successfully completed operations are considered in the final financial reconciliation. This prompt can lead to the following scenarios:
@@ -92,6 +98,12 @@ If any withdrawal fails:
   
 --END--
 
+#### Expected Behavior
+
+The expected Behavior with BankToolsA for Scenario 2.A is: Withdraw(BC3456A, 500) executed five times, Deposit(FG62495S, 2500), and Taxes(FG62495S, 250). The expected Behavior for Scenario 2.B is: Withdraw(BC3456A, 500) executed three times, Withdraw(BC3456A, 500) (Failure), Deposit(FG62495S, 1500), and Taxes(FG62495S, 150).
+
+The expected Behavior with BankToolsB for Scenario 2.A is: executeOperation(WITHDRAW, BC3456A, 500) executed five times, executeOperation(DEPOSIT, FG62495S, 2500), and executeOperation(TAX, FG62495S, 250). The expected Behavior for Scenario 2.B is: executeOperation(WITHDRAW, BC3456A, 500) executed three times, executeOperation(WITHDRAW, BC3456A, 500) (Failure), executeOperation(DEPOSIT, FG62495S, 1500), and executeOperation(TAX, FG62495S, 150).
+
 ### Prompt 3 - Dual Withdrawal with Atomic Consistency
 
 Defines a sequential dual-withdrawal transaction followed by conditional aggregation and payment execution. It enforces strict dependency between operations and specifies rollback behavior to preserve financial consistency in the event of partial failure.
@@ -112,3 +124,8 @@ If any withdrawal fails:
 - Stop and execute nothing else.
   
 --END--
+
+#### Expected Behavior
+The expected Behavior with BankToolsA for Scenario 3.A is: Withdraw(AG7340H, 600), Withdraw(TG23986Q, 700), Deposit(WS2754T, 1300), and Payment(WS2754T, 1200). The expected Behavior for Scenario 3.B is: Withdraw(AG7340H, 600), Withdraw(TG23986Q, 700) (Failure), and ReturnValue(AG7340H, 600).
+
+The expected Behavior with BankToolsB for Scenario 3.A is: executeOperation(WITHDRAW, AG7340H, 600), executeOperation(WITHDRAW, TG23986Q, 700), executeOperation(DEPOSIT, WS2754T, 1300), and executeOperation(PAYMENT, WS2754T, 1200). The expected Behavior for Scenario 3.B is: executeOperation(WITHDRAW, AG7340H, 600), executeOperation(WITHDRAW, TG23986Q, 700) (Failure), and executeOperation(RETURN, AG7340H, 600).
