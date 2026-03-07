@@ -25,6 +25,10 @@ src/
 - Maven 4+
 - Ollama
 
+### Variables
+OPENAI_MODEL_NAME = ˜Enter Model Name Selected˜
+
+EXECUTIONS_PER_SCENARIO = ˜Enter the Execution Per Scenario˜
 
 ## Prompt Engineering and Experimental Scenarios
 
