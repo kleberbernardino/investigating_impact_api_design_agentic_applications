@@ -30,6 +30,8 @@ OPENAI_MODEL_NAME = ˜Enter Model Name Selected˜
 
 EXECUTIONS_PER_SCENARIO = ˜Enter the Execution Per Scenario˜
 
+apiKey = ˜Enter the API Key for Cloud-Based Models˜
+
 ## Prompt Engineering and Experimental Scenarios
 
 Structured prompts were designed to explicitly define the execution order of operations, clearly specify the success and failure conditions for each step, eliminate ambiguity in rollback logic, and constrain the model’s reasoning space to reduce unintended behaviors. In total, three structured prompts were defined, with a system prompt set as the default message to eliminate variability caused by instruction changes. The system prompt was implemented as follows:
