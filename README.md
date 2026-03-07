@@ -1,4 +1,4 @@
-# Investigating the Impact of API Design Techniques for Tools in Agentic Applications
+# Investigating the Impact of API Design Techniques for Tools in Agentic Applications - Replication Package
 Investigating the Impact of API Design Techniques for Tools in Agentic Applications
 
 ## Implementation
