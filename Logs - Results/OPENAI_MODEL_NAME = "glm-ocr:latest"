@@ -1,0 +1,5013 @@
+OPENAI_MODEL_NAME = "glm-ocr:latest" | EXECUTIONS_PER_SCENARIO = 10
+
+/Library/Java/JavaVirtualMachines/jdk-25.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=62333 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/kleberbernardino/Documents/Dissertação Mestrado - IPT/Trabalhos LLM/projeto-tools-llm 2/projeto-tools-llm/target/classes:/Users/kleberbernardino/.m2/repository/dev/langchain4j/langchain4j/1.8.0/langchain4j-1.8.0.jar:/Users/kleberbernardino/.m2/repository/dev/langchain4j/langchain4j-core/1.8.0/langchain4j-core-1.8.0.jar:/Users/kleberbernardino/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/kleberbernardino/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.2/jackson-annotations-2.19.2.jar:/Users/kleberbernardino/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.2/jackson-core-2.19.2.jar:/Users/kleberbernardino/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.2/jackson-databind-2.19.2.jar:/Users/kleberbernardino/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/opennlp-tools-2.5.4.jar:/Users/kleberbernardino/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/Users/kleberbernardino/.m2/repository/dev/langchain4j/langchain4j-open-ai/1.8.0/langchain4j-open-ai-1.8.0.jar:/Users/kleberbernardino/.m2/repository/dev/langchain4j/langchain4j-http-client/1.8.0/langchain4j-http-client-1.8.0.jar:/Users/kleberbernardino/.m2/repository/dev/langchain4j/langchain4j-http-client-jdk/1.8.0/langchain4j-http-client-jdk-1.8.0.jar:/Users/kleberbernardino/.m2/repository/com/knuddels/jtokkit/1.1.0/jtokkit-1.1.0.jar:/Users/kleberbernardino/.m2/repository/dev/langchain4j/langchain4j-ollama/1.8.0/langchain4j-ollama-1.8.0.jar:/Users/kleberbernardino/.m2/repository/org/slf4j/slf4j-simple/2.0.13/slf4j-simple-2.0.13.jar org.example.Main
+=========================================================
+Iniciando bateria de testes com o modelo: glm-ocr:latest
+Execuções por cenário: 10
+=========================================================
+
+#########################################################
+Iniciando Configuração: CONF1: BankToolsA
+#########################################################
+
+--- CONF1: BankToolsA / PROMPT 1 / CENÁRIO A ---
+
+[Execução 1]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC12345",
+  "arg-value-1": "1000",
+  "function-name": "deposit",
+  "arg-key-2": "ND87632",
+  "arg-value-2": "1000",
+  "function-name": "payment",
+  "arg-key-3": "ND87632",
+  "arg-value-3": "1000",
+  "function-name": "taxes",
+  "arg-key-4": "ND87632",
+  "arg-value-4": "1000",
+  "function-name": "returnValue",
+  "arg-key-5": "ND87632",
+  "arg-value-5": "1000"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC12345",
+  "arg-value-1": "1000",
+  "function-name": "deposit",
+  "arg-key-2": "ND87632",
+  "arg-value-2": "1000",
+  "function-name": "payment",
+  "arg-key-3": "ND87632",
+  "arg-value-3": "1000",
+  "function-name": "taxes",
+  "arg-key-4": "ND87632",
+  "arg-value-4": "1000",
+  "function-name": "returnValue",
+  "arg-key-5": "ND87632",
+  "arg-value-5": "1000"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC12345",
+  "arg-value-1": "1000",
+  "function-name": "deposit",
+  "arg-key-2": "ND87632",
+  "arg-value-2": "1000",
+  "function-name": "payment",
+  "arg-key-3": "ND87632",
+  "arg-value-3": "1000",
+  "function-name": "taxes",
+  "arg-key-4": "ND87632",
+  "arg-value-4": "1000",
+  "function-name": "returnValue",
+  "arg-key-5": "ND87632",
+  "arg-value-5": "1000"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC12345",
+  "arg-value-1": "1000",
+  "function-name": "deposit",
+  "arg-key-2": "ND87632",
+  "arg-value-2": "1000",
+  "function-name": "payment",
+  "arg-key-3": "ND87632",
+  "arg-value-3": "1000",
+  "function-name": "taxes",
+  "arg-key-4": "ND87632",
+  "arg-value-4": "1000",
+  "function-name": "returnValue",
+  "arg-key-5": "ND87632",
+  "arg-value-5": "1000"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC12345",
+  "arg-value-1": "1000",
+  "function-name": "deposit",
+  "arg-key-2": "ND87632",
+  "arg-value-2": "1000",
+  "function-name": "payment",
+  "arg-key-3": "ND87632",
+  "arg-value-3": "1000",
+  "function-name": "taxes",
+  "arg-key-4": "ND87632",
+  "arg-value-4": "1000",
+  "function-name": "returnValue",
+  "arg-key-5": "ND87632",
+  "arg-value-5": "1000"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC12345",
+  "arg-value-1": "1000",
+  "function-name": "deposit",
+  "arg-key-2": "ND87632",
+  "arg-value-2": "1000",
+  "function-name": "payment",
+  "arg-key-3": "ND87632",
+  "arg-value-3": "1000",
+  "function-name": "taxes",
+  "arg-key-4": "ND87632",
+  "arg-value-4": "1000",
+  "function-name": "returnValue",
+  "arg-key-5": "ND87632",
+  "arg-value-5": "1000"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC12345",
+  "arg-value-1": "1000",
+  "function-name": "deposit",
+  "arg-key-2": "ND87632",
+  "arg-value-2": "1000",
+  "function-name": "payment",
+  "arg-key-3": "ND87632",
+  "arg-value-3": "1000",
+  "function-name": "taxes",
+  "arg-key-4": "ND87632",
+  "arg-value-4": "1000",
+  "function-name": "returnValue",
+  "arg-key-5": "ND87632",
+  "arg-value-5": "1000"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC12345",
+  "arg-value-1": "1000",
+  "function-name": "deposit",
+  "arg-key-2": "ND87632",
+  "arg-value-2": "1000",
+  "function-name": "payment",
+  "arg-key-3": "ND87632",
+  "arg-value-3": "1000",
+  "function-name": "taxes",
+  "arg-key-4": "ND87632",
+  "arg-value-4": "1000",
+  "function-name": "returnValue",
+  "arg-key-5": "ND87632",
+  "arg-value-5": "1000"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC12345",
+  "arg-value-1": "1000",
+  "function-name": "deposit",
+  "arg-key-2": "ND87632",
+  "arg-value-2": "1000",
+  "function-name": "payment",
+  "arg-key-3": "ND87632",
+  "arg-value-3": "1000",
+  "function-name": "taxes",
+  "arg-key-4": "ND87632",
+  "arg-value-4": "1000",
+  "function-name": "returnValue",
+  "arg-key-5": "ND87632",
+  "arg-value-5": "1000"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC12345",
+  "arg-value-1": "1000",
+  "function-name": "deposit",
+  "arg-key-2": "ND87632",
+  "arg-value-2": "1000",
+  "function-name": "payment",
+  "arg-key-3": "ND87632",
+  "arg-value-3": "1000",
+  "function-name": "taxes",
+  "arg-key-4": "ND87632",
+  "arg-value-4": "1000",
+  "function-name": "returnValue",
+  "arg-key-5": "ND87632",
+  "arg-value-5": "1000"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+--- CONF1: BankToolsA / PROMPT 1 / CENÁRIO B ---
+
+[Execução 1]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC12345",
+  "arg-value-1": "1000",
+  "function-name": "deposit",
+  "arg-key-2": "ND87632",
+  "arg-value-2": "1000",
+  "function-name": "payment",
+  "arg-key-3": "ND87632",
+  "arg-value-3": "1000",
+  "function-name": "taxes",
+  "arg-key-4": "ND87632",
+  "arg-value-4": "1000",
+  "function-name": "returnValue",
+  "arg-key-5": "ND87632",
+  "arg-value-5": "1000"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC12345",
+  "arg-value-1": "1000",
+  "function-name": "deposit",
+  "arg-key-2": "ND87632",
+  "arg-value-2": "1000",
+  "function-name": "payment",
+  "arg-key-3": "ND87632",
+  "arg-value-3": "1000",
+  "function-name": "taxes",
+  "arg-key-4": "ND87632",
+  "arg-value-4": "1000",
+  "function-name": "returnValue",
+  "arg-key-5": "ND87632",
+  "arg-value-5": "1000"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC12345",
+  "arg-value-1": "1000",
+  "function-name": "deposit",
+  "arg-key-2": "ND87632",
+  "arg-value-2": "1000",
+  "function-name": "payment",
+  "arg-key-3": "ND87632",
+  "arg-value-3": "1000",
+  "function-name": "taxes",
+  "arg-key-4": "ND87632",
+  "arg-value-4": "1000",
+  "function-name": "returnValue",
+  "arg-key-5": "ND87632",
+  "arg-value-5": "1000"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC12345",
+  "arg-value-1": "1000",
+  "function-name": "deposit",
+  "arg-key-2": "ND87632",
+  "arg-value-2": "1000",
+  "function-name": "payment",
+  "arg-key-3": "ND87632",
+  "arg-value-3": "1000",
+  "function-name": "taxes",
+  "arg-key-4": "ND87632",
+  "arg-value-4": "1000",
+  "function-name": "returnValue",
+  "arg-key-5": "ND87632",
+  "arg-value-5": "1000"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC12345",
+  "arg-value-1": "1000",
+  "function-name": "deposit",
+  "arg-key-2": "ND87632",
+  "arg-value-2": "1000",
+  "function-name": "payment",
+  "arg-key-3": "ND87632",
+  "arg-value-3": "1000",
+  "function-name": "taxes",
+  "arg-key-4": "ND87632",
+  "arg-value-4": "1000",
+  "function-name": "returnValue",
+  "arg-key-5": "ND87632",
+  "arg-value-5": "1000"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC12345",
+  "arg-value-1": "1000",
+  "function-name": "deposit",
+  "arg-key-2": "ND87632",
+  "arg-value-2": "1000",
+  "function-name": "payment",
+  "arg-key-3": "ND87632",
+  "arg-value-3": "1000",
+  "function-name": "taxes",
+  "arg-key-4": "ND87632",
+  "arg-value-4": "1000",
+  "function-name": "returnValue",
+  "arg-key-5": "ND87632",
+  "arg-value-5": "1000"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC12345",
+  "arg-value-1": "1000",
+  "function-name": "deposit",
+  "arg-key-2": "ND87632",
+  "arg-value-2": "1000",
+  "function-name": "payment",
+  "arg-key-3": "ND87632",
+  "arg-value-3": "1000",
+  "function-name": "taxes",
+  "arg-key-4": "ND87632",
+  "arg-value-4": "1000",
+  "function-name": "returnValue",
+  "arg-key-5": "ND87632",
+  "arg-value-5": "1000"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC12345",
+  "arg-value-1": "1000",
+  "function-name": "deposit",
+  "arg-key-2": "ND87632",
+  "arg-value-2": "1000",
+  "function-name": "payment",
+  "arg-key-3": "ND87632",
+  "arg-value-3": "1000",
+  "function-name": "taxes",
+  "arg-key-4": "ND87632",
+  "arg-value-4": "1000",
+  "function-name": "returnValue",
+  "arg-key-5": "ND87632",
+  "arg-value-5": "1000"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC12345",
+  "arg-value-1": "1000",
+  "function-name": "deposit",
+  "arg-key-2": "ND87632",
+  "arg-value-2": "1000",
+  "function-name": "payment",
+  "arg-key-3": "ND87632",
+  "arg-value-3": "1000",
+  "function-name": "taxes",
+  "arg-key-4": "ND87632",
+  "arg-value-4": "1000",
+  "function-name": "returnValue",
+  "arg-key-5": "ND87632",
+  "arg-value-5": "1000"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC12345",
+  "arg-value-1": "1000",
+  "function-name": "deposit",
+  "arg-key-2": "ND87632",
+  "arg-value-2": "1000",
+  "function-name": "payment",
+  "arg-key-3": "ND87632",
+  "arg-value-3": "1000",
+  "function-name": "taxes",
+  "arg-key-4": "ND87632",
+  "arg-value-4": "1000",
+  "function-name": "returnValue",
+  "arg-key-5": "ND87632",
+  "arg-value-5": "1000"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+--- CONF1: BankToolsA / PROMPT 2 / CENÁRIO A ---
+
+[Execução 1]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "function-name": "deposit",
+  "arg-key-2": "FG62495S",
+  "arg-value-2": "2500",
+  "function-name": "payment",
+  "arg-key-3": "FG62495S",
+  "arg-value-3": "2500",
+  "function-name": "taxes",
+  "arg-key-4": "FG62495S",
+  "arg-value-4": "2500"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "function-name": "deposit",
+  "arg-key-2": "FG62495S",
+  "arg-value-2": "2500",
+  "function-name": "payment",
+  "arg-key-3": "FG62495S",
+  "arg-value-3": "2500",
+  "function-name": "taxes",
+  "arg-key-4": "FG62495S",
+  "arg-value-4": "2500"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "function-name": "deposit",
+  "arg-key-2": "FG62495S",
+  "arg-value-2": "2500",
+  "function-name": "payment",
+  "arg-key-3": "FG62495S",
+  "arg-value-3": "2500",
+  "function-name": "taxes",
+  "arg-key-4": "FG62495S",
+  "arg-value-4": "2500"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "function-name": "deposit",
+  "arg-key-2": "FG62495S",
+  "arg-value-2": "2500",
+  "function-name": "payment",
+  "arg-key-3": "FG62495S",
+  "arg-value-3": "2500",
+  "function-name": "taxes",
+  "arg-key-4": "FG62495S",
+  "arg-value-4": "2500"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "function-name": "deposit",
+  "arg-key-2": "FG62495S",
+  "arg-value-2": "2500",
+  "function-name": "payment",
+  "arg-key-3": "FG62495S",
+  "arg-value-3": "2500",
+  "function-name": "taxes",
+  "arg-key-4": "FG62495S",
+  "arg-value-4": "2500"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "function-name": "deposit",
+  "arg-key-2": "FG62495S",
+  "arg-value-2": "2500",
+  "function-name": "payment",
+  "arg-key-3": "FG62495S",
+  "arg-value-3": "2500",
+  "function-name": "taxes",
+  "arg-key-4": "FG62495S",
+  "arg-value-4": "2500"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "function-name": "deposit",
+  "arg-key-2": "FG62495S",
+  "arg-value-2": "2500",
+  "function-name": "payment",
+  "arg-key-3": "FG62495S",
+  "arg-value-3": "2500",
+  "function-name": "taxes",
+  "arg-key-4": "FG62495S",
+  "arg-value-4": "2500"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "function-name": "deposit",
+  "arg-key-2": "FG62495S",
+  "arg-value-2": "2500",
+  "function-name": "payment",
+  "arg-key-3": "FG62495S",
+  "arg-value-3": "2500",
+  "function-name": "taxes",
+  "arg-key-4": "FG62495S",
+  "arg-value-4": "2500"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "function-name": "deposit",
+  "arg-key-2": "FG62495S",
+  "arg-value-2": "2500",
+  "function-name": "payment",
+  "arg-key-3": "FG62495S",
+  "arg-value-3": "2500",
+  "function-name": "taxes",
+  "arg-key-4": "FG62495S",
+  "arg-value-4": "2500"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "function-name": "deposit",
+  "arg-key-2": "FG62495S",
+  "arg-value-2": "2500",
+  "function-name": "payment",
+  "arg-key-3": "FG62495S",
+  "arg-value-3": "2500",
+  "function-name": "taxes",
+  "arg-key-4": "FG62495S",
+  "arg-value-4": "2500"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+--- CONF1: BankToolsA / PROMPT 2 / CENÁRIO B ---
+
+[Execução 1]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "function-name": "deposit",
+  "arg-key-2": "FG62495S",
+  "arg-value-2": "2500",
+  "function-name": "payment",
+  "arg-key-3": "FG62495S",
+  "arg-value-3": "2500",
+  "function-name": "taxes",
+  "arg-key-4": "FG62495S",
+  "arg-value-4": "2500"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "function-name": "deposit",
+  "arg-key-2": "FG62495S",
+  "arg-value-2": "2500",
+  "function-name": "payment",
+  "arg-key-3": "FG62495S",
+  "arg-value-3": "2500",
+  "function-name": "taxes",
+  "arg-key-4": "FG62495S",
+  "arg-value-4": "2500"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "function-name": "deposit",
+  "arg-key-2": "FG62495S",
+  "arg-value-2": "2500",
+  "function-name": "payment",
+  "arg-key-3": "FG62495S",
+  "arg-value-3": "2500",
+  "function-name": "taxes",
+  "arg-key-4": "FG62495S",
+  "arg-value-4": "2500"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "function-name": "deposit",
+  "arg-key-2": "FG62495S",
+  "arg-value-2": "2500",
+  "function-name": "payment",
+  "arg-key-3": "FG62495S",
+  "arg-value-3": "2500",
+  "function-name": "taxes",
+  "arg-key-4": "FG62495S",
+  "arg-value-4": "2500"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "function-name": "deposit",
+  "arg-key-2": "FG62495S",
+  "arg-value-2": "2500",
+  "function-name": "payment",
+  "arg-key-3": "FG62495S",
+  "arg-value-3": "2500",
+  "function-name": "taxes",
+  "arg-key-4": "FG62495S",
+  "arg-value-4": "2500"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "function-name": "deposit",
+  "arg-key-2": "FG62495S",
+  "arg-value-2": "2500",
+  "function-name": "payment",
+  "arg-key-3": "FG62495S",
+  "arg-value-3": "2500",
+  "function-name": "taxes",
+  "arg-key-4": "FG62495S",
+  "arg-value-4": "2500"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "function-name": "deposit",
+  "arg-key-2": "FG62495S",
+  "arg-value-2": "2500",
+  "function-name": "payment",
+  "arg-key-3": "FG62495S",
+  "arg-value-3": "2500",
+  "function-name": "taxes",
+  "arg-key-4": "FG62495S",
+  "arg-value-4": "2500"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "function-name": "deposit",
+  "arg-key-2": "FG62495S",
+  "arg-value-2": "2500",
+  "function-name": "payment",
+  "arg-key-3": "FG62495S",
+  "arg-value-3": "2500",
+  "function-name": "taxes",
+  "arg-key-4": "FG62495S",
+  "arg-value-4": "2500"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "function-name": "deposit",
+  "arg-key-2": "FG62495S",
+  "arg-value-2": "2500",
+  "function-name": "payment",
+  "arg-key-3": "FG62495S",
+  "arg-value-3": "2500",
+  "function-name": "taxes",
+  "arg-key-4": "FG62495S",
+  "arg-value-4": "2500"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "function-name": "deposit",
+  "arg-key-2": "FG62495S",
+  "arg-value-2": "2500",
+  "function-name": "payment",
+  "arg-key-3": "FG62495S",
+  "arg-value-3": "2500",
+  "function-name": "taxes",
+  "arg-key-4": "FG62495S",
+  "arg-value-4": "2500"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+--- CONF1: BankToolsA / PROMPT 3 / CENÁRIO A ---
+
+[Execução 1]
+: ```xml
+function "withdraw" (arg0: string, arg1: number) {
+  return Value(withdraw(arg0, arg1))
+}
+
+function "deposit" (arg0: string, arg1: number) {
+  return Value(deposit(arg0, arg1))
+}
+
+function "payment" (arg0: string, arg1: number) {
+  return Value(payment(arg0, arg1))
+}
+
+function "taxes" (arg0: string, arg1: number) {
+  return Value(taxes(arg0, arg1))
+}
+
+function "returnValue" (arg0: string, arg1: number) {
+  return Value(returnValue(arg0, arg1))
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```xml
+function "withdraw" (arg0: string, arg1: number) {
+  return Value(withdraw(arg0, arg1))
+}
+
+function "deposit" (arg0: string, arg1: number) {
+  return Value(deposit(arg0, arg1))
+}
+
+function "payment" (arg0: string, arg1: number) {
+  return Value(payment(arg0, arg1))
+}
+
+function "taxes" (arg0: string, arg1: number) {
+  return Value(taxes(arg0, arg1))
+}
+
+function "returnValue" (arg0: string, arg1: number) {
+  return Value(returnValue(arg0, arg1))
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```xml
+function "withdraw" (arg0: string, arg1: number) {
+  return Value(withdraw(arg0, arg1))
+}
+
+function "deposit" (arg0: string, arg1: number) {
+  return Value(deposit(arg0, arg1))
+}
+
+function "payment" (arg0: string, arg1: number) {
+  return Value(payment(arg0, arg1))
+}
+
+function "taxes" (arg0: string, arg1: number) {
+  return Value(taxes(arg0, arg1))
+}
+
+function "returnValue" (arg0: string, arg1: number) {
+  return Value(returnValue(arg0, arg1))
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```xml
+function "withdraw" (arg0: string, arg1: number) {
+  return Value(withdraw(arg0, arg1))
+}
+
+function "deposit" (arg0: string, arg1: number) {
+  return Value(deposit(arg0, arg1))
+}
+
+function "payment" (arg0: string, arg1: number) {
+  return Value(payment(arg0, arg1))
+}
+
+function "taxes" (arg0: string, arg1: number) {
+  return Value(taxes(arg0, arg1))
+}
+
+function "returnValue" (arg0: string, arg1: number) {
+  return Value(returnValue(arg0, arg1))
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```xml
+function "withdraw" (arg0: string, arg1: number) {
+  return Value(withdraw(arg0, arg1))
+}
+
+function "deposit" (arg0: string, arg1: number) {
+  return Value(deposit(arg0, arg1))
+}
+
+function "payment" (arg0: string, arg1: number) {
+  return Value(payment(arg0, arg1))
+}
+
+function "taxes" (arg0: string, arg1: number) {
+  return Value(taxes(arg0, arg1))
+}
+
+function "returnValue" (arg0: string, arg1: number) {
+  return Value(returnValue(arg0, arg1))
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```xml
+function "withdraw" (arg0: string, arg1: number) {
+  return Value(withdraw(arg0, arg1))
+}
+
+function "deposit" (arg0: string, arg1: number) {
+  return Value(deposit(arg0, arg1))
+}
+
+function "payment" (arg0: string, arg1: number) {
+  return Value(payment(arg0, arg1))
+}
+
+function "taxes" (arg0: string, arg1: number) {
+  return Value(taxes(arg0, arg1))
+}
+
+function "returnValue" (arg0: string, arg1: number) {
+  return Value(returnValue(arg0, arg1))
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```xml
+function "withdraw" (arg0: string, arg1: number) {
+  return Value(withdraw(arg0, arg1))
+}
+
+function "deposit" (arg0: string, arg1: number) {
+  return Value(deposit(arg0, arg1))
+}
+
+function "payment" (arg0: string, arg1: number) {
+  return Value(payment(arg0, arg1))
+}
+
+function "taxes" (arg0: string, arg1: number) {
+  return Value(taxes(arg0, arg1))
+}
+
+function "returnValue" (arg0: string, arg1: number) {
+  return Value(returnValue(arg0, arg1))
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```xml
+function "withdraw" (arg0: string, arg1: number) {
+  return Value(withdraw(arg0, arg1))
+}
+
+function "deposit" (arg0: string, arg1: number) {
+  return Value(deposit(arg0, arg1))
+}
+
+function "payment" (arg0: string, arg1: number) {
+  return Value(payment(arg0, arg1))
+}
+
+function "taxes" (arg0: string, arg1: number) {
+  return Value(taxes(arg0, arg1))
+}
+
+function "returnValue" (arg0: string, arg1: number) {
+  return Value(returnValue(arg0, arg1))
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```xml
+function "withdraw" (arg0: string, arg1: number) {
+  return Value(withdraw(arg0, arg1))
+}
+
+function "deposit" (arg0: string, arg1: number) {
+  return Value(deposit(arg0, arg1))
+}
+
+function "payment" (arg0: string, arg1: number) {
+  return Value(payment(arg0, arg1))
+}
+
+function "taxes" (arg0: string, arg1: number) {
+  return Value(taxes(arg0, arg1))
+}
+
+function "returnValue" (arg0: string, arg1: number) {
+  return Value(returnValue(arg0, arg1))
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```xml
+function "withdraw" (arg0: string, arg1: number) {
+  return Value(withdraw(arg0, arg1))
+}
+
+function "deposit" (arg0: string, arg1: number) {
+  return Value(deposit(arg0, arg1))
+}
+
+function "payment" (arg0: string, arg1: number) {
+  return Value(payment(arg0, arg1))
+}
+
+function "taxes" (arg0: string, arg1: number) {
+  return Value(taxes(arg0, arg1))
+}
+
+function "returnValue" (arg0: string, arg1: number) {
+  return Value(returnValue(arg0, arg1))
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+--- CONF1: BankToolsA / PROMPT 3 / CENÁRIO B ---
+
+[Execução 1]
+: ```xml
+function "withdraw" (arg0: string, arg1: number) {
+  return Value(withdraw(arg0, arg1))
+}
+
+function "deposit" (arg0: string, arg1: number) {
+  return Value(deposit(arg0, arg1))
+}
+
+function "payment" (arg0: string, arg1: number) {
+  return Value(payment(arg0, arg1))
+}
+
+function "taxes" (arg0: string, arg1: number) {
+  return Value(taxes(arg0, arg1))
+}
+
+function "returnValue" (arg0: string, arg1: number) {
+  return Value(returnValue(arg0, arg1))
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```xml
+function "withdraw" (arg0: string, arg1: number) {
+  return Value(withdraw(arg0, arg1))
+}
+
+function "deposit" (arg0: string, arg1: number) {
+  return Value(deposit(arg0, arg1))
+}
+
+function "payment" (arg0: string, arg1: number) {
+  return Value(payment(arg0, arg1))
+}
+
+function "taxes" (arg0: string, arg1: number) {
+  return Value(taxes(arg0, arg1))
+}
+
+function "returnValue" (arg0: string, arg1: number) {
+  return Value(returnValue(arg0, arg1))
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```xml
+function "withdraw" (arg0: string, arg1: number) {
+  return Value(withdraw(arg0, arg1))
+}
+
+function "deposit" (arg0: string, arg1: number) {
+  return Value(deposit(arg0, arg1))
+}
+
+function "payment" (arg0: string, arg1: number) {
+  return Value(payment(arg0, arg1))
+}
+
+function "taxes" (arg0: string, arg1: number) {
+  return Value(taxes(arg0, arg1))
+}
+
+function "returnValue" (arg0: string, arg1: number) {
+  return Value(returnValue(arg0, arg1))
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```xml
+function "withdraw" (arg0: string, arg1: number) {
+  return Value(withdraw(arg0, arg1))
+}
+
+function "deposit" (arg0: string, arg1: number) {
+  return Value(deposit(arg0, arg1))
+}
+
+function "payment" (arg0: string, arg1: number) {
+  return Value(payment(arg0, arg1))
+}
+
+function "taxes" (arg0: string, arg1: number) {
+  return Value(taxes(arg0, arg1))
+}
+
+function "returnValue" (arg0: string, arg1: number) {
+  return Value(returnValue(arg0, arg1))
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```xml
+function "withdraw" (arg0: string, arg1: number) {
+  return Value(withdraw(arg0, arg1))
+}
+
+function "deposit" (arg0: string, arg1: number) {
+  return Value(deposit(arg0, arg1))
+}
+
+function "payment" (arg0: string, arg1: number) {
+  return Value(payment(arg0, arg1))
+}
+
+function "taxes" (arg0: string, arg1: number) {
+  return Value(taxes(arg0, arg1))
+}
+
+function "returnValue" (arg0: string, arg1: number) {
+  return Value(returnValue(arg0, arg1))
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```xml
+function "withdraw" (arg0: string, arg1: number) {
+  return Value(withdraw(arg0, arg1))
+}
+
+function "deposit" (arg0: string, arg1: number) {
+  return Value(deposit(arg0, arg1))
+}
+
+function "payment" (arg0: string, arg1: number) {
+  return Value(payment(arg0, arg1))
+}
+
+function "taxes" (arg0: string, arg1: number) {
+  return Value(taxes(arg0, arg1))
+}
+
+function "returnValue" (arg0: string, arg1: number) {
+  return Value(returnValue(arg0, arg1))
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```xml
+function "withdraw" (arg0: string, arg1: number) {
+  return Value(withdraw(arg0, arg1))
+}
+
+function "deposit" (arg0: string, arg1: number) {
+  return Value(deposit(arg0, arg1))
+}
+
+function "payment" (arg0: string, arg1: number) {
+  return Value(payment(arg0, arg1))
+}
+
+function "taxes" (arg0: string, arg1: number) {
+  return Value(taxes(arg0, arg1))
+}
+
+function "returnValue" (arg0: string, arg1: number) {
+  return Value(returnValue(arg0, arg1))
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```xml
+function "withdraw" (arg0: string, arg1: number) {
+  return Value(withdraw(arg0, arg1))
+}
+
+function "deposit" (arg0: string, arg1: number) {
+  return Value(deposit(arg0, arg1))
+}
+
+function "payment" (arg0: string, arg1: number) {
+  return Value(payment(arg0, arg1))
+}
+
+function "taxes" (arg0: string, arg1: number) {
+  return Value(taxes(arg0, arg1))
+}
+
+function "returnValue" (arg0: string, arg1: number) {
+  return Value(returnValue(arg0, arg1))
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```xml
+function "withdraw" (arg0: string, arg1: number) {
+  return Value(withdraw(arg0, arg1))
+}
+
+function "deposit" (arg0: string, arg1: number) {
+  return Value(deposit(arg0, arg1))
+}
+
+function "payment" (arg0: string, arg1: number) {
+  return Value(payment(arg0, arg1))
+}
+
+function "taxes" (arg0: string, arg1: number) {
+  return Value(taxes(arg0, arg1))
+}
+
+function "returnValue" (arg0: string, arg1: number) {
+  return Value(returnValue(arg0, arg1))
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```xml
+function "withdraw" (arg0: string, arg1: number) {
+  return Value(withdraw(arg0, arg1))
+}
+
+function "deposit" (arg0: string, arg1: number) {
+  return Value(deposit(arg0, arg1))
+}
+
+function "payment" (arg0: string, arg1: number) {
+  return Value(payment(arg0, arg1))
+}
+
+function "taxes" (arg0: string, arg1: number) {
+  return Value(taxes(arg0, arg1))
+}
+
+function "returnValue" (arg0: string, arg1: number) {
+  return Value(returnValue(arg0, arg1))
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+#########################################################
+Iniciando Configuração: CONF2: BankToolsB
+#########################################################
+
+--- CONF2: BankToolsB / PROMPT 1 / CENÁRIO A ---
+
+[Execução 1]
+: ```xml
+function executeOperation(accountNumber: string) {
+    return executeOperation(accountNumber, "1000");
+}
+
+function executeOperation(accountNumber: string, arg0: string, arg1: string, arg2: string) {
+    return executeOperation(accountNumber, arg0, arg1, arg2);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```xml
+function executeOperation(accountNumber: string) {
+    return executeOperation(accountNumber, "1000");
+}
+
+function executeOperation(accountNumber: string, arg0: string, arg1: string, arg2: string) {
+    return executeOperation(accountNumber, arg0, arg1, arg2);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```xml
+function executeOperation(accountNumber: string) {
+    return executeOperation(accountNumber, "1000");
+}
+
+function executeOperation(accountNumber: string, arg0: string, arg1: string, arg2: string) {
+    return executeOperation(accountNumber, arg0, arg1, arg2);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```xml
+function executeOperation(accountNumber: string) {
+    return executeOperation(accountNumber, "1000");
+}
+
+function executeOperation(accountNumber: string, arg0: string, arg1: string, arg2: string) {
+    return executeOperation(accountNumber, arg0, arg1, arg2);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```xml
+function executeOperation(accountNumber: string) {
+    return executeOperation(accountNumber, "1000");
+}
+
+function executeOperation(accountNumber: string, arg0: string, arg1: string, arg2: string) {
+    return executeOperation(accountNumber, arg0, arg1, arg2);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```xml
+function executeOperation(accountNumber: string) {
+    return executeOperation(accountNumber, "1000");
+}
+
+function executeOperation(accountNumber: string, arg0: string, arg1: string, arg2: string) {
+    return executeOperation(accountNumber, arg0, arg1, arg2);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```xml
+function executeOperation(accountNumber: string) {
+    return executeOperation(accountNumber, "1000");
+}
+
+function executeOperation(accountNumber: string, arg0: string, arg1: string, arg2: string) {
+    return executeOperation(accountNumber, arg0, arg1, arg2);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```xml
+function executeOperation(accountNumber: string) {
+    return executeOperation(accountNumber, "1000");
+}
+
+function executeOperation(accountNumber: string, arg0: string, arg1: string, arg2: string) {
+    return executeOperation(accountNumber, arg0, arg1, arg2);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```xml
+function executeOperation(accountNumber: string) {
+    return executeOperation(accountNumber, "1000");
+}
+
+function executeOperation(accountNumber: string, arg0: string, arg1: string, arg2: string) {
+    return executeOperation(accountNumber, arg0, arg1, arg2);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```xml
+function executeOperation(accountNumber: string) {
+    return executeOperation(accountNumber, "1000");
+}
+
+function executeOperation(accountNumber: string, arg0: string, arg1: string, arg2: string) {
+    return executeOperation(accountNumber, arg0, arg1, arg2);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+--- CONF2: BankToolsB / PROMPT 1 / CENÁRIO B ---
+
+[Execução 1]
+: ```xml
+function executeOperation(accountNumber: string) {
+    return executeOperation(accountNumber, "1000");
+}
+
+function executeOperation(accountNumber: string, arg0: string, arg1: string, arg2: string) {
+    return executeOperation(accountNumber, arg0, arg1, arg2);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```xml
+function executeOperation(accountNumber: string) {
+    return executeOperation(accountNumber, "1000");
+}
+
+function executeOperation(accountNumber: string, arg0: string, arg1: string, arg2: string) {
+    return executeOperation(accountNumber, arg0, arg1, arg2);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```xml
+function executeOperation(accountNumber: string) {
+    return executeOperation(accountNumber, "1000");
+}
+
+function executeOperation(accountNumber: string, arg0: string, arg1: string, arg2: string) {
+    return executeOperation(accountNumber, arg0, arg1, arg2);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```xml
+function executeOperation(accountNumber: string) {
+    return executeOperation(accountNumber, "1000");
+}
+
+function executeOperation(accountNumber: string, arg0: string, arg1: string, arg2: string) {
+    return executeOperation(accountNumber, arg0, arg1, arg2);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```xml
+function executeOperation(accountNumber: string) {
+    return executeOperation(accountNumber, "1000");
+}
+
+function executeOperation(accountNumber: string, arg0: string, arg1: string, arg2: string) {
+    return executeOperation(accountNumber, arg0, arg1, arg2);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```xml
+function executeOperation(accountNumber: string) {
+    return executeOperation(accountNumber, "1000");
+}
+
+function executeOperation(accountNumber: string, arg0: string, arg1: string, arg2: string) {
+    return executeOperation(accountNumber, arg0, arg1, arg2);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```xml
+function executeOperation(accountNumber: string) {
+    return executeOperation(accountNumber, "1000");
+}
+
+function executeOperation(accountNumber: string, arg0: string, arg1: string, arg2: string) {
+    return executeOperation(accountNumber, arg0, arg1, arg2);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```xml
+function executeOperation(accountNumber: string) {
+    return executeOperation(accountNumber, "1000");
+}
+
+function executeOperation(accountNumber: string, arg0: string, arg1: string, arg2: string) {
+    return executeOperation(accountNumber, arg0, arg1, arg2);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```xml
+function executeOperation(accountNumber: string) {
+    return executeOperation(accountNumber, "1000");
+}
+
+function executeOperation(accountNumber: string, arg0: string, arg1: string, arg2: string) {
+    return executeOperation(accountNumber, arg0, arg1, arg2);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```xml
+function executeOperation(accountNumber: string) {
+    return executeOperation(accountNumber, "1000");
+}
+
+function executeOperation(accountNumber: string, arg0: string, arg1: string, arg2: string) {
+    return executeOperation(accountNumber, arg0, arg1, arg2);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+--- CONF2: BankToolsB / PROMPT 2 / CENÁRIO A ---
+
+[Execução 1]
+: ```json
+{
+  "function-name": "executeOperation",
+  "arguments": {
+    "arg0": "account_number",
+    "arg1": "amount_to_deliver",
+    "arg2": "tax_rate"
+  },
+  "description": "Execute an operation in an account with a given value and return if the operation was successful or not"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```json
+{
+  "function-name": "executeOperation",
+  "arguments": {
+    "arg0": "account_number",
+    "arg1": "amount_to_deliver",
+    "arg2": "tax_rate"
+  },
+  "description": "Execute an operation in an account with a given value and return if the operation was successful or not"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```json
+{
+  "function-name": "executeOperation",
+  "arguments": {
+    "arg0": "account_number",
+    "arg1": "amount_to_deliver",
+    "arg2": "tax_rate"
+  },
+  "description": "Execute an operation in an account with a given value and return if the operation was successful or not"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```json
+{
+  "function-name": "executeOperation",
+  "arguments": {
+    "arg0": "account_number",
+    "arg1": "amount_to_deliver",
+    "arg2": "tax_rate"
+  },
+  "description": "Execute an operation in an account with a given value and return if the operation was successful or not"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```json
+{
+  "function-name": "executeOperation",
+  "arguments": {
+    "arg0": "account_number",
+    "arg1": "amount_to_deliver",
+    "arg2": "tax_rate"
+  },
+  "description": "Execute an operation in an account with a given value and return if the operation was successful or not"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```json
+{
+  "function-name": "executeOperation",
+  "arguments": {
+    "arg0": "account_number",
+    "arg1": "amount_to_deliver",
+    "arg2": "tax_rate"
+  },
+  "description": "Execute an operation in an account with a given value and return if the operation was successful or not"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```json
+{
+  "function-name": "executeOperation",
+  "arguments": {
+    "arg0": "account_number",
+    "arg1": "amount_to_deliver",
+    "arg2": "tax_rate"
+  },
+  "description": "Execute an operation in an account with a given value and return if the operation was successful or not"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```json
+{
+  "function-name": "executeOperation",
+  "arguments": {
+    "arg0": "account_number",
+    "arg1": "amount_to_deliver",
+    "arg2": "tax_rate"
+  },
+  "description": "Execute an operation in an account with a given value and return if the operation was successful or not"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```json
+{
+  "function-name": "executeOperation",
+  "arguments": {
+    "arg0": "account_number",
+    "arg1": "amount_to_deliver",
+    "arg2": "tax_rate"
+  },
+  "description": "Execute an operation in an account with a given value and return if the operation was successful or not"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```json
+{
+  "function-name": "executeOperation",
+  "arguments": {
+    "arg0": "account_number",
+    "arg1": "amount_to_deliver",
+    "arg2": "tax_rate"
+  },
+  "description": "Execute an operation in an account with a given value and return if the operation was successful or not"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+--- CONF2: BankToolsB / PROMPT 2 / CENÁRIO B ---
+
+[Execução 1]
+: ```json
+{
+  "function-name": "executeOperation",
+  "arguments": {
+    "arg0": "account_number",
+    "arg1": "amount_to_deliver",
+    "arg2": "tax_rate"
+  },
+  "description": "Execute an operation in an account with a given value and return if the operation was successful or not"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```json
+{
+  "function-name": "executeOperation",
+  "arguments": {
+    "arg0": "account_number",
+    "arg1": "amount_to_deliver",
+    "arg2": "tax_rate"
+  },
+  "description": "Execute an operation in an account with a given value and return if the operation was successful or not"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```json
+{
+  "function-name": "executeOperation",
+  "arguments": {
+    "arg0": "account_number",
+    "arg1": "amount_to_deliver",
+    "arg2": "tax_rate"
+  },
+  "description": "Execute an operation in an account with a given value and return if the operation was successful or not"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```json
+{
+  "function-name": "executeOperation",
+  "arguments": {
+    "arg0": "account_number",
+    "arg1": "amount_to_deliver",
+    "arg2": "tax_rate"
+  },
+  "description": "Execute an operation in an account with a given value and return if the operation was successful or not"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```json
+{
+  "function-name": "executeOperation",
+  "arguments": {
+    "arg0": "account_number",
+    "arg1": "amount_to_deliver",
+    "arg2": "tax_rate"
+  },
+  "description": "Execute an operation in an account with a given value and return if the operation was successful or not"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```json
+{
+  "function-name": "executeOperation",
+  "arguments": {
+    "arg0": "account_number",
+    "arg1": "amount_to_deliver",
+    "arg2": "tax_rate"
+  },
+  "description": "Execute an operation in an account with a given value and return if the operation was successful or not"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```json
+{
+  "function-name": "executeOperation",
+  "arguments": {
+    "arg0": "account_number",
+    "arg1": "amount_to_deliver",
+    "arg2": "tax_rate"
+  },
+  "description": "Execute an operation in an account with a given value and return if the operation was successful or not"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```json
+{
+  "function-name": "executeOperation",
+  "arguments": {
+    "arg0": "account_number",
+    "arg1": "amount_to_deliver",
+    "arg2": "tax_rate"
+  },
+  "description": "Execute an operation in an account with a given value and return if the operation was successful or not"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```json
+{
+  "function-name": "executeOperation",
+  "arguments": {
+    "arg0": "account_number",
+    "arg1": "amount_to_deliver",
+    "arg2": "tax_rate"
+  },
+  "description": "Execute an operation in an account with a given value and return if the operation was successful or not"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```json
+{
+  "function-name": "executeOperation",
+  "arguments": {
+    "arg0": "account_number",
+    "arg1": "amount_to_deliver",
+    "arg2": "tax_rate"
+  },
+  "description": "Execute an operation in an account with a given value and return if the operation was successful or not"
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+--- CONF2: BankToolsB / PROMPT 3 / CENÁRIO A ---
+
+[Execução 1]
+: ```xml
+function executeOperation(account_number, amount) {
+    return executeWithdrawal(account_number, amount);
+}
+
+function executeWithdrawal(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+
+function withdrawFromAccount(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```xml
+function executeOperation(account_number, amount) {
+    return executeWithdrawal(account_number, amount);
+}
+
+function executeWithdrawal(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+
+function withdrawFromAccount(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```xml
+function executeOperation(account_number, amount) {
+    return executeWithdrawal(account_number, amount);
+}
+
+function executeWithdrawal(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+
+function withdrawFromAccount(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```xml
+function executeOperation(account_number, amount) {
+    return executeWithdrawal(account_number, amount);
+}
+
+function executeWithdrawal(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+
+function withdrawFromAccount(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```xml
+function executeOperation(account_number, amount) {
+    return executeWithdrawal(account_number, amount);
+}
+
+function executeWithdrawal(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+
+function withdrawFromAccount(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```xml
+function executeOperation(account_number, amount) {
+    return executeWithdrawal(account_number, amount);
+}
+
+function executeWithdrawal(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+
+function withdrawFromAccount(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```xml
+function executeOperation(account_number, amount) {
+    return executeWithdrawal(account_number, amount);
+}
+
+function executeWithdrawal(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+
+function withdrawFromAccount(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```xml
+function executeOperation(account_number, amount) {
+    return executeWithdrawal(account_number, amount);
+}
+
+function executeWithdrawal(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+
+function withdrawFromAccount(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```xml
+function executeOperation(account_number, amount) {
+    return executeWithdrawal(account_number, amount);
+}
+
+function executeWithdrawal(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+
+function withdrawFromAccount(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```xml
+function executeOperation(account_number, amount) {
+    return executeWithdrawal(account_number, amount);
+}
+
+function executeWithdrawal(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+
+function withdrawFromAccount(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+--- CONF2: BankToolsB / PROMPT 3 / CENÁRIO B ---
+
+[Execução 1]
+: ```xml
+function executeOperation(account_number, amount) {
+    return executeWithdrawal(account_number, amount);
+}
+
+function executeWithdrawal(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+
+function withdrawFromAccount(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```xml
+function executeOperation(account_number, amount) {
+    return executeWithdrawal(account_number, amount);
+}
+
+function executeWithdrawal(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+
+function withdrawFromAccount(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```xml
+function executeOperation(account_number, amount) {
+    return executeWithdrawal(account_number, amount);
+}
+
+function executeWithdrawal(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+
+function withdrawFromAccount(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```xml
+function executeOperation(account_number, amount) {
+    return executeWithdrawal(account_number, amount);
+}
+
+function executeWithdrawal(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+
+function withdrawFromAccount(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```xml
+function executeOperation(account_number, amount) {
+    return executeWithdrawal(account_number, amount);
+}
+
+function executeWithdrawal(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+
+function withdrawFromAccount(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```xml
+function executeOperation(account_number, amount) {
+    return executeWithdrawal(account_number, amount);
+}
+
+function executeWithdrawal(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+
+function withdrawFromAccount(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```xml
+function executeOperation(account_number, amount) {
+    return executeWithdrawal(account_number, amount);
+}
+
+function executeWithdrawal(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+
+function withdrawFromAccount(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```xml
+function executeOperation(account_number, amount) {
+    return executeWithdrawal(account_number, amount);
+}
+
+function executeWithdrawal(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+
+function withdrawFromAccount(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```xml
+function executeOperation(account_number, amount) {
+    return executeWithdrawal(account_number, amount);
+}
+
+function executeWithdrawal(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+
+function withdrawFromAccount(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```xml
+function executeOperation(account_number, amount) {
+    return executeWithdrawal(account_number, amount);
+}
+
+function executeWithdrawal(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+
+function withdrawFromAccount(account_number, amount) {
+    return withdrawFromAccount(account_number, amount);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+#########################################################
+Iniciando Configuração: CONF3: BankToolsA, BankToolsB
+#########################################################
+
+--- CONF3: BankToolsA, BankToolsB / PROMPT 1 / CENÁRIO A ---
+
+[Execução 1]
+: ```xml
+function Withdraw(accountNumber: string) {
+  return Withdraw(accountNumber, 1000);
+}
+
+function Deposit(accountNumber: string) {
+  return Deposit(accountNumber, 1000);
+}
+
+function Tax(accountNumber: string) {
+  return Tax(accountNumber, 1000);
+}
+
+function ReturnValue(accountNumber: string) {
+  return ReturnValue(accountNumber, 1000);
+}
+
+function executeOperation(accountNumber: string, operationType: string) {
+  executeOperation(accountNumber, operationType);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```xml
+function Withdraw(accountNumber: string) {
+  return Withdraw(accountNumber, 1000);
+}
+
+function Deposit(accountNumber: string) {
+  return Deposit(accountNumber, 1000);
+}
+
+function Tax(accountNumber: string) {
+  return Tax(accountNumber, 1000);
+}
+
+function ReturnValue(accountNumber: string) {
+  return ReturnValue(accountNumber, 1000);
+}
+
+function executeOperation(accountNumber: string, operationType: string) {
+  executeOperation(accountNumber, operationType);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```xml
+function Withdraw(accountNumber: string) {
+  return Withdraw(accountNumber, 1000);
+}
+
+function Deposit(accountNumber: string) {
+  return Deposit(accountNumber, 1000);
+}
+
+function Tax(accountNumber: string) {
+  return Tax(accountNumber, 1000);
+}
+
+function ReturnValue(accountNumber: string) {
+  return ReturnValue(accountNumber, 1000);
+}
+
+function executeOperation(accountNumber: string, operationType: string) {
+  executeOperation(accountNumber, operationType);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```xml
+function Withdraw(accountNumber: string) {
+  return Withdraw(accountNumber, 1000);
+}
+
+function Deposit(accountNumber: string) {
+  return Deposit(accountNumber, 1000);
+}
+
+function Tax(accountNumber: string) {
+  return Tax(accountNumber, 1000);
+}
+
+function ReturnValue(accountNumber: string) {
+  return ReturnValue(accountNumber, 1000);
+}
+
+function executeOperation(accountNumber: string, operationType: string) {
+  executeOperation(accountNumber, operationType);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```xml
+function Withdraw(accountNumber: string) {
+  return Withdraw(accountNumber, 1000);
+}
+
+function Deposit(accountNumber: string) {
+  return Deposit(accountNumber, 1000);
+}
+
+function Tax(accountNumber: string) {
+  return Tax(accountNumber, 1000);
+}
+
+function ReturnValue(accountNumber: string) {
+  return ReturnValue(accountNumber, 1000);
+}
+
+function executeOperation(accountNumber: string, operationType: string) {
+  executeOperation(accountNumber, operationType);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```xml
+function Withdraw(accountNumber: string) {
+  return Withdraw(accountNumber, 1000);
+}
+
+function Deposit(accountNumber: string) {
+  return Deposit(accountNumber, 1000);
+}
+
+function Tax(accountNumber: string) {
+  return Tax(accountNumber, 1000);
+}
+
+function ReturnValue(accountNumber: string) {
+  return ReturnValue(accountNumber, 1000);
+}
+
+function executeOperation(accountNumber: string, operationType: string) {
+  executeOperation(accountNumber, operationType);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```xml
+function Withdraw(accountNumber: string) {
+  return Withdraw(accountNumber, 1000);
+}
+
+function Deposit(accountNumber: string) {
+  return Deposit(accountNumber, 1000);
+}
+
+function Tax(accountNumber: string) {
+  return Tax(accountNumber, 1000);
+}
+
+function ReturnValue(accountNumber: string) {
+  return ReturnValue(accountNumber, 1000);
+}
+
+function executeOperation(accountNumber: string, operationType: string) {
+  executeOperation(accountNumber, operationType);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```xml
+function Withdraw(accountNumber: string) {
+  return Withdraw(accountNumber, 1000);
+}
+
+function Deposit(accountNumber: string) {
+  return Deposit(accountNumber, 1000);
+}
+
+function Tax(accountNumber: string) {
+  return Tax(accountNumber, 1000);
+}
+
+function ReturnValue(accountNumber: string) {
+  return ReturnValue(accountNumber, 1000);
+}
+
+function executeOperation(accountNumber: string, operationType: string) {
+  executeOperation(accountNumber, operationType);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```xml
+function Withdraw(accountNumber: string) {
+  return Withdraw(accountNumber, 1000);
+}
+
+function Deposit(accountNumber: string) {
+  return Deposit(accountNumber, 1000);
+}
+
+function Tax(accountNumber: string) {
+  return Tax(accountNumber, 1000);
+}
+
+function ReturnValue(accountNumber: string) {
+  return ReturnValue(accountNumber, 1000);
+}
+
+function executeOperation(accountNumber: string, operationType: string) {
+  executeOperation(accountNumber, operationType);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```xml
+function Withdraw(accountNumber: string) {
+  return Withdraw(accountNumber, 1000);
+}
+
+function Deposit(accountNumber: string) {
+  return Deposit(accountNumber, 1000);
+}
+
+function Tax(accountNumber: string) {
+  return Tax(accountNumber, 1000);
+}
+
+function ReturnValue(accountNumber: string) {
+  return ReturnValue(accountNumber, 1000);
+}
+
+function executeOperation(accountNumber: string, operationType: string) {
+  executeOperation(accountNumber, operationType);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+--- CONF3: BankToolsA, BankToolsB / PROMPT 1 / CENÁRIO B ---
+
+[Execução 1]
+: ```xml
+function Withdraw(accountNumber: string) {
+  return Withdraw(accountNumber, 1000);
+}
+
+function Deposit(accountNumber: string) {
+  return Deposit(accountNumber, 1000);
+}
+
+function Tax(accountNumber: string) {
+  return Tax(accountNumber, 1000);
+}
+
+function ReturnValue(accountNumber: string) {
+  return ReturnValue(accountNumber, 1000);
+}
+
+function executeOperation(accountNumber: string, operationType: string) {
+  executeOperation(accountNumber, operationType);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```xml
+function Withdraw(accountNumber: string) {
+  return Withdraw(accountNumber, 1000);
+}
+
+function Deposit(accountNumber: string) {
+  return Deposit(accountNumber, 1000);
+}
+
+function Tax(accountNumber: string) {
+  return Tax(accountNumber, 1000);
+}
+
+function ReturnValue(accountNumber: string) {
+  return ReturnValue(accountNumber, 1000);
+}
+
+function executeOperation(accountNumber: string, operationType: string) {
+  executeOperation(accountNumber, operationType);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```xml
+function Withdraw(accountNumber: string) {
+  return Withdraw(accountNumber, 1000);
+}
+
+function Deposit(accountNumber: string) {
+  return Deposit(accountNumber, 1000);
+}
+
+function Tax(accountNumber: string) {
+  return Tax(accountNumber, 1000);
+}
+
+function ReturnValue(accountNumber: string) {
+  return ReturnValue(accountNumber, 1000);
+}
+
+function executeOperation(accountNumber: string, operationType: string) {
+  executeOperation(accountNumber, operationType);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```xml
+function Withdraw(accountNumber: string) {
+  return Withdraw(accountNumber, 1000);
+}
+
+function Deposit(accountNumber: string) {
+  return Deposit(accountNumber, 1000);
+}
+
+function Tax(accountNumber: string) {
+  return Tax(accountNumber, 1000);
+}
+
+function ReturnValue(accountNumber: string) {
+  return ReturnValue(accountNumber, 1000);
+}
+
+function executeOperation(accountNumber: string, operationType: string) {
+  executeOperation(accountNumber, operationType);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```xml
+function Withdraw(accountNumber: string) {
+  return Withdraw(accountNumber, 1000);
+}
+
+function Deposit(accountNumber: string) {
+  return Deposit(accountNumber, 1000);
+}
+
+function Tax(accountNumber: string) {
+  return Tax(accountNumber, 1000);
+}
+
+function ReturnValue(accountNumber: string) {
+  return ReturnValue(accountNumber, 1000);
+}
+
+function executeOperation(accountNumber: string, operationType: string) {
+  executeOperation(accountNumber, operationType);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```xml
+function Withdraw(accountNumber: string) {
+  return Withdraw(accountNumber, 1000);
+}
+
+function Deposit(accountNumber: string) {
+  return Deposit(accountNumber, 1000);
+}
+
+function Tax(accountNumber: string) {
+  return Tax(accountNumber, 1000);
+}
+
+function ReturnValue(accountNumber: string) {
+  return ReturnValue(accountNumber, 1000);
+}
+
+function executeOperation(accountNumber: string, operationType: string) {
+  executeOperation(accountNumber, operationType);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```xml
+function Withdraw(accountNumber: string) {
+  return Withdraw(accountNumber, 1000);
+}
+
+function Deposit(accountNumber: string) {
+  return Deposit(accountNumber, 1000);
+}
+
+function Tax(accountNumber: string) {
+  return Tax(accountNumber, 1000);
+}
+
+function ReturnValue(accountNumber: string) {
+  return ReturnValue(accountNumber, 1000);
+}
+
+function executeOperation(accountNumber: string, operationType: string) {
+  executeOperation(accountNumber, operationType);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```xml
+function Withdraw(accountNumber: string) {
+  return Withdraw(accountNumber, 1000);
+}
+
+function Deposit(accountNumber: string) {
+  return Deposit(accountNumber, 1000);
+}
+
+function Tax(accountNumber: string) {
+  return Tax(accountNumber, 1000);
+}
+
+function ReturnValue(accountNumber: string) {
+  return ReturnValue(accountNumber, 1000);
+}
+
+function executeOperation(accountNumber: string, operationType: string) {
+  executeOperation(accountNumber, operationType);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```xml
+function Withdraw(accountNumber: string) {
+  return Withdraw(accountNumber, 1000);
+}
+
+function Deposit(accountNumber: string) {
+  return Deposit(accountNumber, 1000);
+}
+
+function Tax(accountNumber: string) {
+  return Tax(accountNumber, 1000);
+}
+
+function ReturnValue(accountNumber: string) {
+  return ReturnValue(accountNumber, 1000);
+}
+
+function executeOperation(accountNumber: string, operationType: string) {
+  executeOperation(accountNumber, operationType);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```xml
+function Withdraw(accountNumber: string) {
+  return Withdraw(accountNumber, 1000);
+}
+
+function Deposit(accountNumber: string) {
+  return Deposit(accountNumber, 1000);
+}
+
+function Tax(accountNumber: string) {
+  return Tax(accountNumber, 1000);
+}
+
+function ReturnValue(accountNumber: string) {
+  return ReturnValue(accountNumber, 1000);
+}
+
+function executeOperation(accountNumber: string, operationType: string) {
+  executeOperation(accountNumber, operationType);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+--- CONF3: BankToolsA, BankToolsB / PROMPT 2 / CENÁRIO A ---
+
+[Execução 1]
+: ```json
+{
+    "function-name": "withdraw",
+    "arg-key-1": "BC3456A",
+    "arg-value-1": "500",
+    "arg-key-2": "",
+    "arg-value-2": "",
+    "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```json
+{
+    "function-name": "withdraw",
+    "arg-key-1": "BC3456A",
+    "arg-value-1": "500",
+    "arg-key-2": "",
+    "arg-value-2": "",
+    "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```json
+{
+    "function-name": "withdraw",
+    "arg-key-1": "BC3456A",
+    "arg-value-1": "500",
+    "arg-key-2": "",
+    "arg-value-2": "",
+    "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```json
+{
+    "function-name": "withdraw",
+    "arg-key-1": "BC3456A",
+    "arg-value-1": "500",
+    "arg-key-2": "",
+    "arg-value-2": "",
+    "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```json
+{
+    "function-name": "withdraw",
+    "arg-key-1": "BC3456A",
+    "arg-value-1": "500",
+    "arg-key-2": "",
+    "arg-value-2": "",
+    "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```json
+{
+    "function-name": "withdraw",
+    "arg-key-1": "BC3456A",
+    "arg-value-1": "500",
+    "arg-key-2": "",
+    "arg-value-2": "",
+    "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```json
+{
+    "function-name": "withdraw",
+    "arg-key-1": "BC3456A",
+    "arg-value-1": "500",
+    "arg-key-2": "",
+    "arg-value-2": "",
+    "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```json
+{
+    "function-name": "withdraw",
+    "arg-key-1": "BC3456A",
+    "arg-value-1": "500",
+    "arg-key-2": "",
+    "arg-value-2": "",
+    "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```json
+{
+    "function-name": "withdraw",
+    "arg-key-1": "BC3456A",
+    "arg-value-1": "500",
+    "arg-key-2": "",
+    "arg-value-2": "",
+    "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```json
+{
+    "function-name": "withdraw",
+    "arg-key-1": "BC3456A",
+    "arg-value-1": "500",
+    "arg-key-2": "",
+    "arg-value-2": "",
+    "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+--- CONF3: BankToolsA, BankToolsB / PROMPT 2 / CENÁRIO B ---
+
+[Execução 1]
+: ```json
+{
+    "function-name": "withdraw",
+    "arg-key-1": "BC3456A",
+    "arg-value-1": "500",
+    "arg-key-2": "",
+    "arg-value-2": "",
+    "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```json
+{
+    "function-name": "withdraw",
+    "arg-key-1": "BC3456A",
+    "arg-value-1": "500",
+    "arg-key-2": "",
+    "arg-value-2": "",
+    "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```json
+{
+    "function-name": "withdraw",
+    "arg-key-1": "BC3456A",
+    "arg-value-1": "500",
+    "arg-key-2": "",
+    "arg-value-2": "",
+    "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```json
+{
+    "function-name": "withdraw",
+    "arg-key-1": "BC3456A",
+    "arg-value-1": "500",
+    "arg-key-2": "",
+    "arg-value-2": "",
+    "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```json
+{
+    "function-name": "withdraw",
+    "arg-key-1": "BC3456A",
+    "arg-value-1": "500",
+    "arg-key-2": "",
+    "arg-value-2": "",
+    "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```json
+{
+    "function-name": "withdraw",
+    "arg-key-1": "BC3456A",
+    "arg-value-1": "500",
+    "arg-key-2": "",
+    "arg-value-2": "",
+    "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```json
+{
+    "function-name": "withdraw",
+    "arg-key-1": "BC3456A",
+    "arg-value-1": "500",
+    "arg-key-2": "",
+    "arg-value-2": "",
+    "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```json
+{
+    "function-name": "withdraw",
+    "arg-key-1": "BC3456A",
+    "arg-value-1": "500",
+    "arg-key-2": "",
+    "arg-value-2": "",
+    "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```json
+{
+    "function-name": "withdraw",
+    "arg-key-1": "BC3456A",
+    "arg-value-1": "500",
+    "arg-key-2": "",
+    "arg-value-2": "",
+    "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```json
+{
+    "function-name": "withdraw",
+    "arg-key-1": "BC3456A",
+    "arg-value-1": "500",
+    "arg-key-2": "",
+    "arg-value-2": "",
+    "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+--- CONF3: BankToolsA, BankToolsB / PROMPT 3 / CENÁRIO A ---
+
+[Execução 1]
+: ```xml
+function "withdraw" (account number AG7340H, value 600) {
+  return Withdraw(AG7340H, 600);
+}
+
+function "deposit" (account number TG23986Q, value 700) {
+  deposit(TG23986Q, 700);
+}
+
+function "tax" (account number AG7340H, value 1300) {
+  tax(AG7340H, 1300);
+}
+
+function "return" (account number WS2754T, value 1200) {
+  return(WS2754T, 1200);
+}
+
+function "payment" (account number WS2754T, value 1200) {
+  payment(WS2754T, 1200);
+}
+
+function "returnValue" (account number AG7340H, value 1300) {
+  return(AG7340H, 1300);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```xml
+function withdraw(account number, value) {
+  withdraw(account number, value)
+}
+
+function deposit(account number, value) {
+  deposit(account number, value)
+}
+
+function tax(account number, value) {
+  tax(account number, value)
+}
+
+function payment(account number, value) {
+  payment(account number, value)
+}
+
+function returnValue(account number, value) {
+  returnValue(account number, value)
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```xml
+function withdraw(account number, value) {
+  withdraw(account number, value)
+}
+
+function deposit(account number, value) {
+  deposit(account number, value)
+}
+
+function tax(account number, value) {
+  tax(account number, value)
+}
+
+function payment(account number, value) {
+  payment(account number, value)
+}
+
+function returnValue(account number, value) {
+  returnValue(account number, value)
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```xml
+function withdraw(account number, value) {
+  withdraw(account number, value)
+}
+
+function deposit(account number, value) {
+  deposit(account number, value)
+}
+
+function tax(account number, value) {
+  tax(account number, value)
+}
+
+function payment(account number, value) {
+  payment(account number, value)
+}
+
+function returnValue(account number, value) {
+  returnValue(account number, value)
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```xml
+function withdraw(account number, value) {
+  withdraw(account number, value)
+}
+
+function deposit(account number, value) {
+  deposit(account number, value)
+}
+
+function tax(account number, value) {
+  tax(account number, value)
+}
+
+function payment(account number, value) {
+  payment(account number, value)
+}
+
+function returnValue(account number, value) {
+  returnValue(account number, value)
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```xml
+function withdraw(account number, value) {
+  withdraw(account number, value)
+}
+
+function deposit(account number, value) {
+  deposit(account number, value)
+}
+
+function tax(account number, value) {
+  tax(account number, value)
+}
+
+function payment(account number, value) {
+  payment(account number, value)
+}
+
+function returnValue(account number, value) {
+  returnValue(account number, value)
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```xml
+function withdraw(account number, value) {
+  withdraw(account number, value)
+}
+
+function deposit(account number, value) {
+  deposit(account number, value)
+}
+
+function tax(account number, value) {
+  tax(account number, value)
+}
+
+function payment(account number, value) {
+  payment(account number, value)
+}
+
+function returnValue(account number, value) {
+  returnValue(account number, value)
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```xml
+function withdraw(account number, value) {
+  withdraw(account number, value)
+}
+
+function deposit(account number, value) {
+  deposit(account number, value)
+}
+
+function tax(account number, value) {
+  tax(account number, value)
+}
+
+function payment(account number, value) {
+  payment(account number, value)
+}
+
+function returnValue(account number, value) {
+  returnValue(account number, value)
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```xml
+function withdraw(account number, value) {
+  withdraw(account number, value)
+}
+
+function deposit(account number, value) {
+  deposit(account number, value)
+}
+
+function tax(account number, value) {
+  tax(account number, value)
+}
+
+function payment(account number, value) {
+  payment(account number, value)
+}
+
+function returnValue(account number, value) {
+  returnValue(account number, value)
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```xml
+function withdraw(account number, value) {
+  withdraw(account number, value)
+}
+
+function deposit(account number, value) {
+  deposit(account number, value)
+}
+
+function tax(account number, value) {
+  tax(account number, value)
+}
+
+function payment(account number, value) {
+  payment(account number, value)
+}
+
+function returnValue(account number, value) {
+  returnValue(account number, value)
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+--- CONF3: BankToolsA, BankToolsB / PROMPT 3 / CENÁRIO B ---
+
+[Execução 1]
+: ```xml
+function withdraw(account number, value) {
+  withdraw(account number, value)
+}
+
+function deposit(account number, value) {
+  deposit(account number, value)
+}
+
+function tax(account number, value) {
+  tax(account number, value)
+}
+
+function payment(account number, value) {
+  payment(account number, value)
+}
+
+function returnValue(account number, value) {
+  returnValue(account number, value)
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```xml
+function withdraw(account number, value) {
+  withdraw(account number, value)
+}
+
+function deposit(account number, value) {
+  deposit(account number, value)
+}
+
+function tax(account number, value) {
+  tax(account number, value)
+}
+
+function payment(account number, value) {
+  payment(account number, value)
+}
+
+function returnValue(account number, value) {
+  returnValue(account number, value)
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```xml
+function withdraw(account number, value) {
+  withdraw(account number, value)
+}
+
+function deposit(account number, value) {
+  deposit(account number, value)
+}
+
+function tax(account number, value) {
+  tax(account number, value)
+}
+
+function payment(account number, value) {
+  payment(account number, value)
+}
+
+function returnValue(account number, value) {
+  returnValue(account number, value)
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```xml
+function withdraw(account number, value) {
+  withdraw(account number, value)
+}
+
+function deposit(account number, value) {
+  deposit(account number, value)
+}
+
+function tax(account number, value) {
+  tax(account number, value)
+}
+
+function payment(account number, value) {
+  payment(account number, value)
+}
+
+function returnValue(account number, value) {
+  returnValue(account number, value)
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```xml
+function withdraw(account number, value) {
+  withdraw(account number, value)
+}
+
+function deposit(account number, value) {
+  deposit(account number, value)
+}
+
+function tax(account number, value) {
+  tax(account number, value)
+}
+
+function payment(account number, value) {
+  payment(account number, value)
+}
+
+function returnValue(account number, value) {
+  returnValue(account number, value)
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```xml
+function withdraw(account number, value) {
+  withdraw(account number, value)
+}
+
+function deposit(account number, value) {
+  deposit(account number, value)
+}
+
+function tax(account number, value) {
+  tax(account number, value)
+}
+
+function payment(account number, value) {
+  payment(account number, value)
+}
+
+function returnValue(account number, value) {
+  returnValue(account number, value)
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```xml
+function withdraw(account number, value) {
+  withdraw(account number, value)
+}
+
+function deposit(account number, value) {
+  deposit(account number, value)
+}
+
+function tax(account number, value) {
+  tax(account number, value)
+}
+
+function payment(account number, value) {
+  payment(account number, value)
+}
+
+function returnValue(account number, value) {
+  returnValue(account number, value)
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```xml
+function withdraw(account number, value) {
+  withdraw(account number, value)
+}
+
+function deposit(account number, value) {
+  deposit(account number, value)
+}
+
+function tax(account number, value) {
+  tax(account number, value)
+}
+
+function payment(account number, value) {
+  payment(account number, value)
+}
+
+function returnValue(account number, value) {
+  returnValue(account number, value)
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```xml
+function withdraw(account number, value) {
+  withdraw(account number, value)
+}
+
+function deposit(account number, value) {
+  deposit(account number, value)
+}
+
+function tax(account number, value) {
+  tax(account number, value)
+}
+
+function payment(account number, value) {
+  payment(account number, value)
+}
+
+function returnValue(account number, value) {
+  returnValue(account number, value)
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```xml
+function withdraw(account number, value) {
+  withdraw(account number, value)
+}
+
+function deposit(account number, value) {
+  deposit(account number, value)
+}
+
+function tax(account number, value) {
+  tax(account number, value)
+}
+
+function payment(account number, value) {
+  payment(account number, value)
+}
+
+function returnValue(account number, value) {
+  returnValue(account number, value)
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+#########################################################
+Iniciando Configuração: CONF4: BankToolsB, BankToolsA
+#########################################################
+
+--- CONF4: BankToolsB, BankToolsA / PROMPT 1 / CENÁRIO A ---
+
+[Execução 1]
+: ```xml
+function executeOperation(accountNumber: string) {
+  return executeOperation(accountNumber, "WITHDRAW");
+}
+
+function withdraw(accountNumber: string) {
+  return withdraw(accountNumber, "DEPOSIT");
+}
+
+function deposit(accountNumber: string) {
+  return deposit(accountNumber, "TAX");
+}
+
+function payment(accountNumber: string) {
+  return payment(accountNumber, "RETURN");
+}
+
+function taxes(accountNumber: string) {
+  return taxes(accountNumber, "RETURN");
+}
+
+function returnValue(accountNumber: string) {
+  return returnValue(accountNumber, "RETURN");
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```xml
+function executeOperation(accountNumber: string) {
+  return executeOperation(accountNumber, "WITHDRAW");
+}
+
+function withdraw(accountNumber: string) {
+  return withdraw(accountNumber, "DEPOSIT");
+}
+
+function deposit(accountNumber: string) {
+  return deposit(accountNumber, "TAX");
+}
+
+function payment(accountNumber: string) {
+  return payment(accountNumber, "RETURN");
+}
+
+function taxes(accountNumber: string) {
+  return taxes(accountNumber, "RETURN");
+}
+
+function returnValue(accountNumber: string) {
+  return returnValue(accountNumber, "RETURN");
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```xml
+function executeOperation(accountNumber: string) {
+  return executeOperation(accountNumber, "WITHDRAW");
+}
+
+function withdraw(accountNumber: string) {
+  return withdraw(accountNumber, "DEPOSIT");
+}
+
+function deposit(accountNumber: string) {
+  return deposit(accountNumber, "TAX");
+}
+
+function payment(accountNumber: string) {
+  return payment(accountNumber, "RETURN");
+}
+
+function taxes(accountNumber: string) {
+  return taxes(accountNumber, "RETURN");
+}
+
+function returnValue(accountNumber: string) {
+  return returnValue(accountNumber, "RETURN");
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```xml
+function executeOperation(accountNumber: string) {
+  return executeOperation(accountNumber, "WITHDRAW");
+}
+
+function withdraw(accountNumber: string) {
+  return withdraw(accountNumber, "DEPOSIT");
+}
+
+function deposit(accountNumber: string) {
+  return deposit(accountNumber, "TAX");
+}
+
+function payment(accountNumber: string) {
+  return payment(accountNumber, "RETURN");
+}
+
+function taxes(accountNumber: string) {
+  return taxes(accountNumber, "RETURN");
+}
+
+function returnValue(accountNumber: string) {
+  return returnValue(accountNumber, "RETURN");
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```xml
+function executeOperation(accountNumber: string) {
+  return executeOperation(accountNumber, "WITHDRAW");
+}
+
+function withdraw(accountNumber: string) {
+  return withdraw(accountNumber, "DEPOSIT");
+}
+
+function deposit(accountNumber: string) {
+  return deposit(accountNumber, "TAX");
+}
+
+function payment(accountNumber: string) {
+  return payment(accountNumber, "RETURN");
+}
+
+function taxes(accountNumber: string) {
+  return taxes(accountNumber, "RETURN");
+}
+
+function returnValue(accountNumber: string) {
+  return returnValue(accountNumber, "RETURN");
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```xml
+function executeOperation(accountNumber: string) {
+  return executeOperation(accountNumber, "WITHDRAW");
+}
+
+function withdraw(accountNumber: string) {
+  return withdraw(accountNumber, "DEPOSIT");
+}
+
+function deposit(accountNumber: string) {
+  return deposit(accountNumber, "TAX");
+}
+
+function payment(accountNumber: string) {
+  return payment(accountNumber, "RETURN");
+}
+
+function taxes(accountNumber: string) {
+  return taxes(accountNumber, "RETURN");
+}
+
+function returnValue(accountNumber: string) {
+  return returnValue(accountNumber, "RETURN");
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```xml
+function executeOperation(accountNumber: string) {
+  return executeOperation(accountNumber, "WITHDRAW");
+}
+
+function withdraw(accountNumber: string) {
+  return withdraw(accountNumber, "DEPOSIT");
+}
+
+function deposit(accountNumber: string) {
+  return deposit(accountNumber, "TAX");
+}
+
+function payment(accountNumber: string) {
+  return payment(accountNumber, "RETURN");
+}
+
+function taxes(accountNumber: string) {
+  return taxes(accountNumber, "RETURN");
+}
+
+function returnValue(accountNumber: string) {
+  return returnValue(accountNumber, "RETURN");
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```xml
+function executeOperation(accountNumber: string) {
+  return executeOperation(accountNumber, "WITHDRAW");
+}
+
+function withdraw(accountNumber: string) {
+  return withdraw(accountNumber, "DEPOSIT");
+}
+
+function deposit(accountNumber: string) {
+  return deposit(accountNumber, "TAX");
+}
+
+function payment(accountNumber: string) {
+  return payment(accountNumber, "RETURN");
+}
+
+function taxes(accountNumber: string) {
+  return taxes(accountNumber, "RETURN");
+}
+
+function returnValue(accountNumber: string) {
+  return returnValue(accountNumber, "RETURN");
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```xml
+function executeOperation(accountNumber: string) {
+  return executeOperation(accountNumber, "WITHDRAW");
+}
+
+function withdraw(accountNumber: string) {
+  return withdraw(accountNumber, "DEPOSIT");
+}
+
+function deposit(accountNumber: string) {
+  return deposit(accountNumber, "TAX");
+}
+
+function payment(accountNumber: string) {
+  return payment(accountNumber, "RETURN");
+}
+
+function taxes(accountNumber: string) {
+  return taxes(accountNumber, "RETURN");
+}
+
+function returnValue(accountNumber: string) {
+  return returnValue(accountNumber, "RETURN");
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```xml
+function executeOperation(accountNumber: string) {
+  return executeOperation(accountNumber, "WITHDRAW");
+}
+
+function withdraw(accountNumber: string) {
+  return withdraw(accountNumber, "DEPOSIT");
+}
+
+function deposit(accountNumber: string) {
+  return deposit(accountNumber, "TAX");
+}
+
+function payment(accountNumber: string) {
+  return payment(accountNumber, "RETURN");
+}
+
+function taxes(accountNumber: string) {
+  return taxes(accountNumber, "RETURN");
+}
+
+function returnValue(accountNumber: string) {
+  return returnValue(accountNumber, "RETURN");
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+--- CONF4: BankToolsB, BankToolsA / PROMPT 1 / CENÁRIO B ---
+
+[Execução 1]
+: ```xml
+function executeOperation(accountNumber: string) {
+  return executeOperation(accountNumber, "WITHDRAW");
+}
+
+function withdraw(accountNumber: string) {
+  return withdraw(accountNumber, "DEPOSIT");
+}
+
+function deposit(accountNumber: string) {
+  return deposit(accountNumber, "TAX");
+}
+
+function payment(accountNumber: string) {
+  return payment(accountNumber, "RETURN");
+}
+
+function taxes(accountNumber: string) {
+  return taxes(accountNumber, "RETURN");
+}
+
+function returnValue(accountNumber: string) {
+  return returnValue(accountNumber, "RETURN");
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```xml
+function executeOperation(accountNumber: string) {
+  return executeOperation(accountNumber, "WITHDRAW");
+}
+
+function withdraw(accountNumber: string) {
+  return withdraw(accountNumber, "DEPOSIT");
+}
+
+function deposit(accountNumber: string) {
+  return deposit(accountNumber, "TAX");
+}
+
+function payment(accountNumber: string) {
+  return payment(accountNumber, "RETURN");
+}
+
+function taxes(accountNumber: string) {
+  return taxes(accountNumber, "RETURN");
+}
+
+function returnValue(accountNumber: string) {
+  return returnValue(accountNumber, "RETURN");
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```xml
+function executeOperation(accountNumber: string) {
+  return executeOperation(accountNumber, "WITHDRAW");
+}
+
+function withdraw(accountNumber: string) {
+  return withdraw(accountNumber, "DEPOSIT");
+}
+
+function deposit(accountNumber: string) {
+  return deposit(accountNumber, "TAX");
+}
+
+function payment(accountNumber: string) {
+  return payment(accountNumber, "RETURN");
+}
+
+function taxes(accountNumber: string) {
+  return taxes(accountNumber, "RETURN");
+}
+
+function returnValue(accountNumber: string) {
+  return returnValue(accountNumber, "RETURN");
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```xml
+function executeOperation(accountNumber: string) {
+  return executeOperation(accountNumber, "WITHDRAW");
+}
+
+function withdraw(accountNumber: string) {
+  return withdraw(accountNumber, "DEPOSIT");
+}
+
+function deposit(accountNumber: string) {
+  return deposit(accountNumber, "TAX");
+}
+
+function payment(accountNumber: string) {
+  return payment(accountNumber, "RETURN");
+}
+
+function taxes(accountNumber: string) {
+  return taxes(accountNumber, "RETURN");
+}
+
+function returnValue(accountNumber: string) {
+  return returnValue(accountNumber, "RETURN");
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```xml
+function executeOperation(accountNumber: string) {
+  return executeOperation(accountNumber, "WITHDRAW");
+}
+
+function withdraw(accountNumber: string) {
+  return withdraw(accountNumber, "DEPOSIT");
+}
+
+function deposit(accountNumber: string) {
+  return deposit(accountNumber, "TAX");
+}
+
+function payment(accountNumber: string) {
+  return payment(accountNumber, "RETURN");
+}
+
+function taxes(accountNumber: string) {
+  return taxes(accountNumber, "RETURN");
+}
+
+function returnValue(accountNumber: string) {
+  return returnValue(accountNumber, "RETURN");
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```xml
+function executeOperation(accountNumber: string) {
+  return executeOperation(accountNumber, "WITHDRAW");
+}
+
+function withdraw(accountNumber: string) {
+  return withdraw(accountNumber, "DEPOSIT");
+}
+
+function deposit(accountNumber: string) {
+  return deposit(accountNumber, "TAX");
+}
+
+function payment(accountNumber: string) {
+  return payment(accountNumber, "RETURN");
+}
+
+function taxes(accountNumber: string) {
+  return taxes(accountNumber, "RETURN");
+}
+
+function returnValue(accountNumber: string) {
+  return returnValue(accountNumber, "RETURN");
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```xml
+function executeOperation(accountNumber: string) {
+  return executeOperation(accountNumber, "WITHDRAW");
+}
+
+function withdraw(accountNumber: string) {
+  return withdraw(accountNumber, "DEPOSIT");
+}
+
+function deposit(accountNumber: string) {
+  return deposit(accountNumber, "TAX");
+}
+
+function payment(accountNumber: string) {
+  return payment(accountNumber, "RETURN");
+}
+
+function taxes(accountNumber: string) {
+  return taxes(accountNumber, "RETURN");
+}
+
+function returnValue(accountNumber: string) {
+  return returnValue(accountNumber, "RETURN");
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```xml
+function executeOperation(accountNumber: string) {
+  return executeOperation(accountNumber, "WITHDRAW");
+}
+
+function withdraw(accountNumber: string) {
+  return withdraw(accountNumber, "DEPOSIT");
+}
+
+function deposit(accountNumber: string) {
+  return deposit(accountNumber, "TAX");
+}
+
+function payment(accountNumber: string) {
+  return payment(accountNumber, "RETURN");
+}
+
+function taxes(accountNumber: string) {
+  return taxes(accountNumber, "RETURN");
+}
+
+function returnValue(accountNumber: string) {
+  return returnValue(accountNumber, "RETURN");
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```xml
+function executeOperation(accountNumber: string) {
+  return executeOperation(accountNumber, "WITHDRAW");
+}
+
+function withdraw(accountNumber: string) {
+  return withdraw(accountNumber, "DEPOSIT");
+}
+
+function deposit(accountNumber: string) {
+  return deposit(accountNumber, "TAX");
+}
+
+function payment(accountNumber: string) {
+  return payment(accountNumber, "RETURN");
+}
+
+function taxes(accountNumber: string) {
+  return taxes(accountNumber, "RETURN");
+}
+
+function returnValue(accountNumber: string) {
+  return returnValue(accountNumber, "RETURN");
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```xml
+function executeOperation(accountNumber: string) {
+  return executeOperation(accountNumber, "WITHDRAW");
+}
+
+function withdraw(accountNumber: string) {
+  return withdraw(accountNumber, "DEPOSIT");
+}
+
+function deposit(accountNumber: string) {
+  return deposit(accountNumber, "TAX");
+}
+
+function payment(accountNumber: string) {
+  return payment(accountNumber, "RETURN");
+}
+
+function taxes(accountNumber: string) {
+  return taxes(accountNumber, "RETURN");
+}
+
+function returnValue(accountNumber: string) {
+  return returnValue(accountNumber, "RETURN");
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+--- CONF4: BankToolsB, BankToolsA / PROMPT 2 / CENÁRIO A ---
+
+[Execução 1]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "arg-key-2": "",
+  "arg-value-2": "2500",
+  "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "arg-key-2": "",
+  "arg-value-2": "2500",
+  "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "arg-key-2": "",
+  "arg-value-2": "2500",
+  "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "arg-key-2": "",
+  "arg-value-2": "2500",
+  "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "arg-key-2": "",
+  "arg-value-2": "2500",
+  "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "arg-key-2": "",
+  "arg-value-2": "2500",
+  "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "arg-key-2": "",
+  "arg-value-2": "2500",
+  "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "arg-key-2": "",
+  "arg-value-2": "2500",
+  "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "arg-key-2": "",
+  "arg-value-2": "2500",
+  "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "arg-key-2": "",
+  "arg-value-2": "2500",
+  "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+--- CONF4: BankToolsB, BankToolsA / PROMPT 2 / CENÁRIO B ---
+
+[Execução 1]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "arg-key-2": "",
+  "arg-value-2": "2500",
+  "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "arg-key-2": "",
+  "arg-value-2": "2500",
+  "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "arg-key-2": "",
+  "arg-value-2": "2500",
+  "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "arg-key-2": "",
+  "arg-value-2": "2500",
+  "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "arg-key-2": "",
+  "arg-value-2": "2500",
+  "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "arg-key-2": "",
+  "arg-value-2": "2500",
+  "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "arg-key-2": "",
+  "arg-value-2": "2500",
+  "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "arg-key-2": "",
+  "arg-value-2": "2500",
+  "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "arg-key-2": "",
+  "arg-value-2": "2500",
+  "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```json
+{
+  "function-name": "withdraw",
+  "arg-key-1": "BC3456A",
+  "arg-value-1": "500",
+  "arg-key-2": "",
+  "arg-value-2": "2500",
+  "next-step": "Deposit the total successfully withdrawn amount of 2500 into account FG62495S."
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+--- CONF4: BankToolsB, BankToolsA / PROMPT 3 / CENÁRIO A ---
+
+[Execução 1]
+: ```xml
+function executeOperation(accountNumber, value) {
+  return executeOperation(accountNumber, value);
+}
+
+function withdraw(accountNumber, value) {
+  return withdraw(accountNumber, value);
+}
+
+function deposit(accountNumber, value) {
+  return deposit(accountNumber, value);
+}
+
+function payment(accountNumber, value) {
+  return payment(accountNumber, value);
+}
+
+function tax(accountNumber, value) {
+  return tax(accountNumber, value);
+}
+
+function returnValue(accountNumber, value) {
+  return returnValue(accountNumber, value);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```xml
+function executeOperation(accountNumber, value) {
+  return executeOperation(accountNumber, value);
+}
+
+function withdraw(accountNumber, value) {
+  return withdraw(accountNumber, value);
+}
+
+function deposit(accountNumber, value) {
+  return deposit(accountNumber, value);
+}
+
+function payment(accountNumber, value) {
+  return payment(accountNumber, value);
+}
+
+function tax(accountNumber, value) {
+  return tax(accountNumber, value);
+}
+
+function returnValue(accountNumber, value) {
+  return returnValue(accountNumber, value);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```xml
+function executeOperation(accountNumber, value) {
+  return executeOperation(accountNumber, value);
+}
+
+function withdraw(accountNumber, value) {
+  return withdraw(accountNumber, value);
+}
+
+function deposit(accountNumber, value) {
+  return deposit(accountNumber, value);
+}
+
+function payment(accountNumber, value) {
+  return payment(accountNumber, value);
+}
+
+function tax(accountNumber, value) {
+  return tax(accountNumber, value);
+}
+
+function returnValue(accountNumber, value) {
+  return returnValue(accountNumber, value);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```xml
+function executeOperation(accountNumber, value) {
+  return executeOperation(accountNumber, value);
+}
+
+function withdraw(accountNumber, value) {
+  return withdraw(accountNumber, value);
+}
+
+function deposit(accountNumber, value) {
+  return deposit(accountNumber, value);
+}
+
+function payment(accountNumber, value) {
+  return payment(accountNumber, value);
+}
+
+function tax(accountNumber, value) {
+  return tax(accountNumber, value);
+}
+
+function returnValue(accountNumber, value) {
+  return returnValue(accountNumber, value);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```xml
+function executeOperation(accountNumber, value) {
+  return executeOperation(accountNumber, value);
+}
+
+function withdraw(accountNumber, value) {
+  return withdraw(accountNumber, value);
+}
+
+function deposit(accountNumber, value) {
+  return deposit(accountNumber, value);
+}
+
+function payment(accountNumber, value) {
+  return payment(accountNumber, value);
+}
+
+function tax(accountNumber, value) {
+  return tax(accountNumber, value);
+}
+
+function returnValue(accountNumber, value) {
+  return returnValue(accountNumber, value);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```xml
+function executeOperation(accountNumber, value) {
+  return executeOperation(accountNumber, value);
+}
+
+function withdraw(accountNumber, value) {
+  return withdraw(accountNumber, value);
+}
+
+function deposit(accountNumber, value) {
+  return deposit(accountNumber, value);
+}
+
+function payment(accountNumber, value) {
+  return payment(accountNumber, value);
+}
+
+function tax(accountNumber, value) {
+  return tax(accountNumber, value);
+}
+
+function returnValue(accountNumber, value) {
+  return returnValue(accountNumber, value);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```xml
+function executeOperation(accountNumber, value) {
+  return executeOperation(accountNumber, value);
+}
+
+function withdraw(accountNumber, value) {
+  return withdraw(accountNumber, value);
+}
+
+function deposit(accountNumber, value) {
+  return deposit(accountNumber, value);
+}
+
+function payment(accountNumber, value) {
+  return payment(accountNumber, value);
+}
+
+function tax(accountNumber, value) {
+  return tax(accountNumber, value);
+}
+
+function returnValue(accountNumber, value) {
+  return returnValue(accountNumber, value);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```xml
+function executeOperation(accountNumber, value) {
+  return executeOperation(accountNumber, value);
+}
+
+function withdraw(accountNumber, value) {
+  return withdraw(accountNumber, value);
+}
+
+function deposit(accountNumber, value) {
+  return deposit(accountNumber, value);
+}
+
+function payment(accountNumber, value) {
+  return payment(accountNumber, value);
+}
+
+function tax(accountNumber, value) {
+  return tax(accountNumber, value);
+}
+
+function returnValue(accountNumber, value) {
+  return returnValue(accountNumber, value);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```xml
+function executeOperation(accountNumber, value) {
+  return executeOperation(accountNumber, value);
+}
+
+function withdraw(accountNumber, value) {
+  return withdraw(accountNumber, value);
+}
+
+function deposit(accountNumber, value) {
+  return deposit(accountNumber, value);
+}
+
+function payment(accountNumber, value) {
+  return payment(accountNumber, value);
+}
+
+function tax(accountNumber, value) {
+  return tax(accountNumber, value);
+}
+
+function returnValue(accountNumber, value) {
+  return returnValue(accountNumber, value);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```xml
+function executeOperation(accountNumber, value) {
+  return executeOperation(accountNumber, value);
+}
+
+function withdraw(accountNumber, value) {
+  return withdraw(accountNumber, value);
+}
+
+function deposit(accountNumber, value) {
+  return deposit(accountNumber, value);
+}
+
+function payment(accountNumber, value) {
+  return payment(accountNumber, value);
+}
+
+function tax(accountNumber, value) {
+  return tax(accountNumber, value);
+}
+
+function returnValue(accountNumber, value) {
+  return returnValue(accountNumber, value);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+--- CONF4: BankToolsB, BankToolsA / PROMPT 3 / CENÁRIO B ---
+
+[Execução 1]
+: ```xml
+function executeOperation(accountNumber, value) {
+  return executeOperation(accountNumber, value);
+}
+
+function withdraw(accountNumber, value) {
+  return withdraw(accountNumber, value);
+}
+
+function deposit(accountNumber, value) {
+  return deposit(accountNumber, value);
+}
+
+function payment(accountNumber, value) {
+  return payment(accountNumber, value);
+}
+
+function tax(accountNumber, value) {
+  return tax(accountNumber, value);
+}
+
+function returnValue(accountNumber, value) {
+  return returnValue(accountNumber, value);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 2]
+: ```xml
+function executeOperation(accountNumber, value) {
+  return executeOperation(accountNumber, value);
+}
+
+function withdraw(accountNumber, value) {
+  return withdraw(accountNumber, value);
+}
+
+function deposit(accountNumber, value) {
+  return deposit(accountNumber, value);
+}
+
+function payment(accountNumber, value) {
+  return payment(accountNumber, value);
+}
+
+function tax(accountNumber, value) {
+  return tax(accountNumber, value);
+}
+
+function returnValue(accountNumber, value) {
+  return returnValue(accountNumber, value);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 3]
+: ```xml
+function executeOperation(accountNumber, value) {
+  return executeOperation(accountNumber, value);
+}
+
+function withdraw(accountNumber, value) {
+  return withdraw(accountNumber, value);
+}
+
+function deposit(accountNumber, value) {
+  return deposit(accountNumber, value);
+}
+
+function payment(accountNumber, value) {
+  return payment(accountNumber, value);
+}
+
+function tax(accountNumber, value) {
+  return tax(accountNumber, value);
+}
+
+function returnValue(accountNumber, value) {
+  return returnValue(accountNumber, value);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 4]
+: ```xml
+function executeOperation(accountNumber, value) {
+  return executeOperation(accountNumber, value);
+}
+
+function withdraw(accountNumber, value) {
+  return withdraw(accountNumber, value);
+}
+
+function deposit(accountNumber, value) {
+  return deposit(accountNumber, value);
+}
+
+function payment(accountNumber, value) {
+  return payment(accountNumber, value);
+}
+
+function tax(accountNumber, value) {
+  return tax(accountNumber, value);
+}
+
+function returnValue(accountNumber, value) {
+  return returnValue(accountNumber, value);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 5]
+: ```xml
+function executeOperation(accountNumber, value) {
+  return executeOperation(accountNumber, value);
+}
+
+function withdraw(accountNumber, value) {
+  return withdraw(accountNumber, value);
+}
+
+function deposit(accountNumber, value) {
+  return deposit(accountNumber, value);
+}
+
+function payment(accountNumber, value) {
+  return payment(accountNumber, value);
+}
+
+function tax(accountNumber, value) {
+  return tax(accountNumber, value);
+}
+
+function returnValue(accountNumber, value) {
+  return returnValue(accountNumber, value);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 6]
+: ```xml
+function executeOperation(accountNumber, value) {
+  return executeOperation(accountNumber, value);
+}
+
+function withdraw(accountNumber, value) {
+  return withdraw(accountNumber, value);
+}
+
+function deposit(accountNumber, value) {
+  return deposit(accountNumber, value);
+}
+
+function payment(accountNumber, value) {
+  return payment(accountNumber, value);
+}
+
+function tax(accountNumber, value) {
+  return tax(accountNumber, value);
+}
+
+function returnValue(accountNumber, value) {
+  return returnValue(accountNumber, value);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 7]
+: ```xml
+function executeOperation(accountNumber, value) {
+  return executeOperation(accountNumber, value);
+}
+
+function withdraw(accountNumber, value) {
+  return withdraw(accountNumber, value);
+}
+
+function deposit(accountNumber, value) {
+  return deposit(accountNumber, value);
+}
+
+function payment(accountNumber, value) {
+  return payment(accountNumber, value);
+}
+
+function tax(accountNumber, value) {
+  return tax(accountNumber, value);
+}
+
+function returnValue(accountNumber, value) {
+  return returnValue(accountNumber, value);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 8]
+: ```xml
+function executeOperation(accountNumber, value) {
+  return executeOperation(accountNumber, value);
+}
+
+function withdraw(accountNumber, value) {
+  return withdraw(accountNumber, value);
+}
+
+function deposit(accountNumber, value) {
+  return deposit(accountNumber, value);
+}
+
+function payment(accountNumber, value) {
+  return payment(accountNumber, value);
+}
+
+function tax(accountNumber, value) {
+  return tax(accountNumber, value);
+}
+
+function returnValue(accountNumber, value) {
+  return returnValue(accountNumber, value);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 9]
+: ```xml
+function executeOperation(accountNumber, value) {
+  return executeOperation(accountNumber, value);
+}
+
+function withdraw(accountNumber, value) {
+  return withdraw(accountNumber, value);
+}
+
+function deposit(accountNumber, value) {
+  return deposit(accountNumber, value);
+}
+
+function payment(accountNumber, value) {
+  return payment(accountNumber, value);
+}
+
+function tax(accountNumber, value) {
+  return tax(accountNumber, value);
+}
+
+function returnValue(accountNumber, value) {
+  return returnValue(accountNumber, value);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+[Execução 10]
+: ```xml
+function executeOperation(accountNumber, value) {
+  return executeOperation(accountNumber, value);
+}
+
+function withdraw(accountNumber, value) {
+  return withdraw(accountNumber, value);
+}
+
+function deposit(accountNumber, value) {
+  return deposit(accountNumber, value);
+}
+
+function payment(accountNumber, value) {
+  return payment(accountNumber, value);
+}
+
+function tax(accountNumber, value) {
+  return tax(accountNumber, value);
+}
+
+function returnValue(accountNumber, value) {
+  return returnValue(accountNumber, value);
+}
+```
+[Log de Chamadas]: Nenhuma chamada
+
+---------------------------------------------------------
+
+CORRETUDE: 0/10 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (INCORRETO)
+    Log: Nenhuma chamada
+---------------------------------------------------------
+
+=========================================================
+--- Bateria de testes concluída. ---
+=========================================================
+
+Process finished with exit code 0
