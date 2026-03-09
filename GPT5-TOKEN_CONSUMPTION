@@ -1,0 +1,1123 @@
+/Library/Java/JavaVirtualMachines/jdk-25.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=59325 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/kleberbernardino/Documents/Dissertação Mestrado - IPT/Trabalhos LLM/projeto-tools-llm/cloud_models/target/classes:/Users/kleberbernardino/.m2/repository/dev/langchain4j/langchain4j/1.8.0/langchain4j-1.8.0.jar:/Users/kleberbernardino/.m2/repository/dev/langchain4j/langchain4j-core/1.8.0/langchain4j-core-1.8.0.jar:/Users/kleberbernardino/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/kleberbernardino/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.2/jackson-annotations-2.19.2.jar:/Users/kleberbernardino/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.2/jackson-core-2.19.2.jar:/Users/kleberbernardino/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.2/jackson-databind-2.19.2.jar:/Users/kleberbernardino/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/opennlp-tools-2.5.4.jar:/Users/kleberbernardino/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/Users/kleberbernardino/.m2/repository/dev/langchain4j/langchain4j-open-ai/1.8.0/langchain4j-open-ai-1.8.0.jar:/Users/kleberbernardino/.m2/repository/dev/langchain4j/langchain4j-http-client/1.8.0/langchain4j-http-client-1.8.0.jar:/Users/kleberbernardino/.m2/repository/dev/langchain4j/langchain4j-http-client-jdk/1.8.0/langchain4j-http-client-jdk-1.8.0.jar:/Users/kleberbernardino/.m2/repository/com/knuddels/jtokkit/1.1.0/jtokkit-1.1.0.jar:/Users/kleberbernardino/.m2/repository/org/slf4j/slf4j-simple/2.0.13/slf4j-simple-2.0.13.jar org.example.Main
+=========================================================
+Iniciando bateria de testes com o modelo: gpt-5
+Execuções por cenário: 2
+=========================================================
+
+#########################################################
+Iniciando Configuração: CONF1: BankToolsA
+#########################################################
+
+--- CONF1: BankToolsA / PROMPT 1 / CENÁRIO A ---
+
+[Execução 1]
+[ToolA] withdraw(BC12345, 1000,00) -> true
+[ToolA] deposit(ND87632, 1000,00) -> true
+[ToolA] taxes(BC12345, 1,50) -> true
+: All operations completed successfully:
+- Withdrew 1000 from account BC12345.
+- Deposited 1000 into account ND87632.
+- Charged 1.50 from account BC12345.
+[TOKENS]
+Input: 2143
+Output: 513
+Total: 2656
+[Log de Chamadas]: BankToolsA: [withdraw(BC12345, 1000,00), deposit(ND87632, 1000,00), taxes(BC12345, 1,50)]
+
+[Execução 2]
+[ToolA] withdraw(BC12345, 1000,00) -> true
+[ToolA] deposit(ND87632, 1000,00) -> true
+[ToolA] taxes(BC12345, 1,50) -> true
+: All operations completed successfully:
+- Withdrew 1000 from BC12345.
+- Deposited 1000 into ND87632.
+- Charged 1.50 in tax from BC12345.
+[TOKENS]
+Input: 2143
+Output: 704
+Total: 2847
+[Log de Chamadas]: BankToolsA: [withdraw(BC12345, 1000,00), deposit(ND87632, 1000,00), taxes(BC12345, 1,50)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsA: [withdraw(BC12345, 1000,00), deposit(ND87632, 1000,00), taxes(BC12345, 1,50)]
+---------------------------------------------------------
+
+--- CONF1: BankToolsA / PROMPT 1 / CENÁRIO B ---
+
+[Execução 1]
+[ToolA] withdraw(BC12345, 1000,00) -> true
+[ToolA] deposit(ND87632, 1000,00) -> false
+[ToolA] returnValue(BC12345, 1000,00) -> true
+: Summary of operations:
+- Withdraw 1000 from BC12345: succeeded.
+- Deposit 1000 into ND87632: failed.
+- Rolled back: returned 1000 to BC12345: succeeded.
+- No tax charged due to failure.
+[TOKENS]
+Input: 2142
+Output: 1551
+Total: 3693
+[Log de Chamadas]: BankToolsA: [withdraw(BC12345, 1000,00), deposit(ND87632, 1000,00), returnValue(BC12345, 1000,00)]
+
+[Execução 2]
+[ToolA] withdraw(BC12345, 1000,00) -> true
+[ToolA] deposit(ND87632, 1000,00) -> false
+[ToolA] returnValue(BC12345, 1000,00) -> true
+: Summary of operations:
+- Withdraw 1000 from BC12345: Success
+- Deposit 1000 into ND87632: Failed
+
+Action taken due to failure:
+- Reverted the successful withdrawal by returning 1000 to BC12345: Success
+- No tax charged.
+
+Result: All completed operations were undone due to a failure; no further actions executed.
+[TOKENS]
+Input: 2142
+Output: 1317
+Total: 3459
+[Log de Chamadas]: BankToolsA: [withdraw(BC12345, 1000,00), deposit(ND87632, 1000,00), returnValue(BC12345, 1000,00)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsA: [withdraw(BC12345, 1000,00), deposit(ND87632, 1000,00), returnValue(BC12345, 1000,00)]
+---------------------------------------------------------
+
+--- CONF1: BankToolsA / PROMPT 2 / CENÁRIO A ---
+
+[Execução 1]
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] deposit(FG62495S, 2500,00) -> true
+[ToolA] taxes(FG62495S, 250,00) -> true
+: All operations completed successfully.
+
+- Withdrawals from account BC3456A: 5 executed, all succeeded (total 2500).
+- Deposited 2500 into account FG62495S: success.
+- Charged tax of 250 (10% of 2500) from account FG62495S: success.
+
+No further actions required.
+[TOKENS]
+Input: 5420
+Output: 711
+Total: 6131
+[Log de Chamadas]: BankToolsA: [withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), deposit(FG62495S, 2500,00), taxes(FG62495S, 250,00)]
+
+[Execução 2]
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] deposit(FG62495S, 2500,00) -> true
+[ToolA] taxes(FG62495S, 250,00) -> true
+: All operations completed successfully.
+
+- Withdrawals from BC3456A: 5 succeeded (500 each), total 2500.
+- Deposited 2500 into FG62495S: success.
+- Charged tax of 10% on 2500 (250) from FG62495S: success.
+
+No further actions required.
+[TOKENS]
+Input: 5420
+Output: 906
+Total: 6326
+[Log de Chamadas]: BankToolsA: [withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), deposit(FG62495S, 2500,00), taxes(FG62495S, 250,00)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsA: [withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), deposit(FG62495S, 2500,00), taxes(FG62495S, 250,00)]
+---------------------------------------------------------
+
+--- CONF1: BankToolsA / PROMPT 2 / CENÁRIO B ---
+
+[Execução 1]
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> false
+[ToolA] deposit(FG62495S, 1500,00) -> true
+[ToolA] taxes(FG62495S, 150,00) -> true
+: Summary of executed operations:
+- Withdraw 500 from BC3456A: success
+- Withdraw 500 from BC3456A: success
+- Withdraw 500 from BC3456A: success
+- Withdraw 500 from BC3456A: failed
+- Deposited 1500 into FG62495S: success
+- Charged tax of 150 from FG62495S: success
+
+Process stopped after the first failed withdrawal, as requested.
+[TOKENS]
+Input: 4617
+Output: 1866
+Total: 6483
+[Log de Chamadas]: BankToolsA: [withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), deposit(FG62495S, 1500,00), taxes(FG62495S, 150,00)]
+
+[Execução 2]
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> false
+[ToolA] deposit(FG62495S, 1500,00) -> true
+[ToolA] taxes(FG62495S, 150,00) -> true
+: Execution summary:
+- Withdrawals from BC3456A: success, success, success, failed on 4th attempt (stopped further withdrawals).
+- Deposited 1500 into FG62495S.
+- Charged tax of 150 (10% of 1500) from FG62495S.
+
+All required operations completed.
+[TOKENS]
+Input: 4617
+Output: 1649
+Total: 6266
+[Log de Chamadas]: BankToolsA: [withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), deposit(FG62495S, 1500,00), taxes(FG62495S, 150,00)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsA: [withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), deposit(FG62495S, 1500,00), taxes(FG62495S, 150,00)]
+---------------------------------------------------------
+
+--- CONF1: BankToolsA / PROMPT 3 / CENÁRIO A ---
+
+[Execução 1]
+[ToolA] withdraw(AG7340H, 600,00) -> true
+[ToolA] withdraw(TG23986Q, 700,00) -> true
+[ToolA] deposit(WS2754T, 1300,00) -> true
+[ToolA] payment(WS2754T, 1200,00) -> true
+: All operations completed successfully:
+- Withdrawals: 600 from AG7340H and 700 from TG23986Q
+- Deposit: 1300 into WS2754T
+- Payment: 1200 from WS2754T
+[TOKENS]
+Input: 2868
+Output: 869
+Total: 3737
+[Log de Chamadas]: BankToolsA: [withdraw(AG7340H, 600,00), withdraw(TG23986Q, 700,00), deposit(WS2754T, 1300,00), payment(WS2754T, 1200,00)]
+
+[Execução 2]
+[ToolA] withdraw(AG7340H, 600,00) -> true
+[ToolA] withdraw(TG23986Q, 700,00) -> true
+[ToolA] deposit(WS2754T, 1300,00) -> true
+[ToolA] payment(WS2754T, 1200,00) -> true
+: All operations executed successfully:
+- Withdrew 600 from AG7340H.
+- Withdrew 700 from TG23986Q.
+- Deposited 1300 into WS2754T.
+- Performed a payment of 1200 from WS2754T.
+[TOKENS]
+Input: 2868
+Output: 1837
+Total: 4705
+[Log de Chamadas]: BankToolsA: [withdraw(AG7340H, 600,00), withdraw(TG23986Q, 700,00), deposit(WS2754T, 1300,00), payment(WS2754T, 1200,00)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsA: [withdraw(AG7340H, 600,00), withdraw(TG23986Q, 700,00), deposit(WS2754T, 1300,00), payment(WS2754T, 1200,00)]
+---------------------------------------------------------
+
+--- CONF1: BankToolsA / PROMPT 3 / CENÁRIO B ---
+
+[Execução 1]
+[ToolA] withdraw(AG7340H, 600,00) -> true
+[ToolA] withdraw(TG23986Q, 700,00) -> false
+[ToolA] returnValue(AG7340H, 600,00) -> true
+: Summary of executed operations:
+- Withdraw 600 from account AG7340H: Success
+- Withdraw 700 from account TG23986Q: Failed
+- Returned 600 to account AG7340H due to failure in the second withdrawal: Success
+
+Per instructions, no further actions were taken.
+[TOKENS]
+Input: 2222
+Output: 1175
+Total: 3397
+[Log de Chamadas]: BankToolsA: [withdraw(AG7340H, 600,00), withdraw(TG23986Q, 700,00), returnValue(AG7340H, 600,00)]
+
+[Execução 2]
+[ToolA] withdraw(AG7340H, 600,00) -> true
+[ToolA] withdraw(TG23986Q, 700,00) -> false
+[ToolA] returnValue(AG7340H, 600,00) -> true
+: Summary of operations:
+- Withdraw 600 from account AG7340H: Success
+- Withdraw 700 from account TG23986Q: Failed
+- Returned 600 to account AG7340H: Success
+
+Per instructions, stopping further actions due to withdrawal failure.
+[TOKENS]
+Input: 2222
+Output: 1617
+Total: 3839
+[Log de Chamadas]: BankToolsA: [withdraw(AG7340H, 600,00), withdraw(TG23986Q, 700,00), returnValue(AG7340H, 600,00)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsA: [withdraw(AG7340H, 600,00), withdraw(TG23986Q, 700,00), returnValue(AG7340H, 600,00)]
+---------------------------------------------------------
+
+#########################################################
+Iniciando Configuração: CONF2: BankToolsB
+#########################################################
+
+--- CONF2: BankToolsB / PROMPT 1 / CENÁRIO A ---
+
+[Execução 1]
+[ToolB] executeOperation(WITHDRAW, BC12345, 1000,00) -> true
+[ToolB] executeOperation(DEPOSIT, ND87632, 1000,00) -> true
+[ToolB] executeOperation(TAX, BC12345, 1,50) -> true
+: All operations executed successfully:
+- Withdraw 1000 from BC12345: success
+- Deposit 1000 into ND87632: success
+- Charged 1.50 tax from BC12345: success
+[TOKENS]
+Input: 1737
+Output: 2971
+Total: 4708
+[Log de Chamadas]: BankToolsB: [executeOperation(WITHDRAW, BC12345, 1000,00), executeOperation(DEPOSIT, ND87632, 1000,00), executeOperation(TAX, BC12345, 1,50)]
+
+[Execução 2]
+[ToolB] executeOperation(WITHDRAW, BC12345, 1000,00) -> true
+[ToolB] executeOperation(DEPOSIT, ND87632, 1000,00) -> true
+[ToolB] executeOperation(TAX, BC12345, 1,50) -> true
+: All requested operations have been executed successfully:
+- Withdraw 1000 from account BC12345: success
+- Deposit 1000 into account ND87632: success
+- Charge 1.50 tax from account BC12345: success
+
+No reversals were required.
+[TOKENS]
+Input: 1737
+Output: 743
+Total: 2480
+[Log de Chamadas]: BankToolsB: [executeOperation(WITHDRAW, BC12345, 1000,00), executeOperation(DEPOSIT, ND87632, 1000,00), executeOperation(TAX, BC12345, 1,50)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsB: [executeOperation(WITHDRAW, BC12345, 1000,00), executeOperation(DEPOSIT, ND87632, 1000,00), executeOperation(TAX, BC12345, 1,50)]
+---------------------------------------------------------
+
+--- CONF2: BankToolsB / PROMPT 1 / CENÁRIO B ---
+
+[Execução 1]
+[ToolB] executeOperation(WITHDRAW, BC12345, 1000,00) -> true
+[ToolB] executeOperation(DEPOSIT, ND87632, 1000,00) -> false
+[ToolB] executeOperation(RETURN, BC12345, 1000,00) -> true
+: Operation sequence executed:
+
+- WITHDRAW 1000 from BC12345: Success
+- DEPOSIT 1000 into ND87632: Failed
+- RETURN 1000 to BC12345 to undo the successful withdrawal: Success
+
+A failure occurred, so no tax was charged and no further actions were taken.
+[TOKENS]
+Input: 1735
+Output: 2995
+Total: 4730
+[Log de Chamadas]: BankToolsB: [executeOperation(WITHDRAW, BC12345, 1000,00), executeOperation(DEPOSIT, ND87632, 1000,00), executeOperation(RETURN, BC12345, 1000,00)]
+
+[Execução 2]
+[ToolB] executeOperation(WITHDRAW, BC12345, 1000,00) -> true
+[ToolB] executeOperation(DEPOSIT, ND87632, 1000,00) -> false
+[ToolB] executeOperation(RETURN, BC12345, 1000,00) -> true
+: The deposit failed. I have reversed the successful withdrawal from account BC12345. No tax was charged.
+[TOKENS]
+Input: 1735
+Output: 2121
+Total: 3856
+[Log de Chamadas]: BankToolsB: [executeOperation(WITHDRAW, BC12345, 1000,00), executeOperation(DEPOSIT, ND87632, 1000,00), executeOperation(RETURN, BC12345, 1000,00)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsB: [executeOperation(WITHDRAW, BC12345, 1000,00), executeOperation(DEPOSIT, ND87632, 1000,00), executeOperation(RETURN, BC12345, 1000,00)]
+---------------------------------------------------------
+
+--- CONF2: BankToolsB / PROMPT 2 / CENÁRIO A ---
+
+[Execução 1]
+[ToolB] executeOperation(WITHDRAW, BC3456A, 500,00) -> true
+[ToolB] executeOperation(WITHDRAW, BC3456A, 500,00) -> true
+[ToolB] executeOperation(WITHDRAW, BC3456A, 500,00) -> true
+[ToolB] executeOperation(WITHDRAW, BC3456A, 500,00) -> true
+[ToolB] executeOperation(WITHDRAW, BC3456A, 500,00) -> true
+[ToolB] executeOperation(DEPOSIT, FG62495S, 2500,00) -> true
+[ToolB] executeOperation(TAX, FG62495S, 250,00) -> true
+: All operations completed successfully:
+- 5 withdrawals of 500 each from account BC3456A
+- Deposit of 2500 into account FG62495S
+- Tax charged: 250 (10% of 2500) from account FG62495S
+[TOKENS]
+Input: 4738
+Output: 1335
+Total: 6073
+[Log de Chamadas]: BankToolsB: [executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(DEPOSIT, FG62495S, 2500,00), executeOperation(TAX, FG62495S, 250,00)]
+
+[Execução 2]
+[ToolB] executeOperation(WITHDRAW, BC3456A, 500,00) -> true
+[ToolB] executeOperation(WITHDRAW, BC3456A, 500,00) -> true
+[ToolB] executeOperation(WITHDRAW, BC3456A, 500,00) -> true
+[ToolB] executeOperation(WITHDRAW, BC3456A, 500,00) -> true
+[ToolB] executeOperation(WITHDRAW, BC3456A, 500,00) -> true
+[ToolB] executeOperation(DEPOSIT, FG62495S, 2500,00) -> true
+[ToolB] executeOperation(TAX, FG62495S, 250,00) -> true
+: All operations executed successfully:
+- Withdrawals: 5 x 500 from account BC3456A (total 2500) — all succeeded.
+- Deposit: 2500 into account FG62495S — succeeded.
+- Tax: Charged 10% of 2500 (250) from account FG62495S — succeeded.
+
+Process complete.
+[TOKENS]
+Input: 4738
+Output: 1086
+Total: 5824
+[Log de Chamadas]: BankToolsB: [executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(DEPOSIT, FG62495S, 2500,00), executeOperation(TAX, FG62495S, 250,00)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsB: [executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(DEPOSIT, FG62495S, 2500,00), executeOperation(TAX, FG62495S, 250,00)]
+---------------------------------------------------------
+
+--- CONF2: BankToolsB / PROMPT 2 / CENÁRIO B ---
+
+[Execução 1]
+[ToolB] executeOperation(WITHDRAW, BC3456A, 500,00) -> true
+[ToolB] executeOperation(WITHDRAW, BC3456A, 500,00) -> true
+[ToolB] executeOperation(WITHDRAW, BC3456A, 500,00) -> true
+[ToolB] executeOperation(WITHDRAW, BC3456A, 500,00) -> false
+[ToolB] executeOperation(DEPOSIT, FG62495S, 1500,00) -> true
+[ToolB] executeOperation(TAX, FG62495S, 150,00) -> true
+: Summary of executed operations:
+- WITHDRAW 500 from BC3456A: success
+- WITHDRAW 500 from BC3456A: success
+- WITHDRAW 500 from BC3456A: success
+- WITHDRAW 500 from BC3456A: failed
+- DEPOSIT 1500 into FG62495S: success
+- TAX 150 from FG62495S: success
+
+Outcome:
+- Total successfully withdrawn before failure: 1500
+- Deposited into FG62495S: 1500
+- Tax charged (10% of 1500): 150
+
+No further withdrawals were attempted after the failure, per instructions.
+[TOKENS]
+Input: 3992
+Output: 1949
+Total: 5941
+[Log de Chamadas]: BankToolsB: [executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(DEPOSIT, FG62495S, 1500,00), executeOperation(TAX, FG62495S, 150,00)]
+
+[Execução 2]
+[ToolB] executeOperation(WITHDRAW, BC3456A, 500,00) -> true
+[ToolB] executeOperation(WITHDRAW, BC3456A, 500,00) -> true
+[ToolB] executeOperation(WITHDRAW, BC3456A, 500,00) -> true
+[ToolB] executeOperation(WITHDRAW, BC3456A, 500,00) -> false
+[ToolB] executeOperation(DEPOSIT, FG62495S, 1500,00) -> true
+[ToolB] executeOperation(TAX, FG62495S, 150,00) -> true
+: Operations completed.
+
+Summary:
+- Withdrawals from BC3456A: 3 successful (500 each), 1 failed. Stopped further withdrawals per instructions.
+- Deposited 1500 into FG62495S.
+- Charged tax of 150 (10% of 1500) from FG62495S.
+
+No further actions executed.
+[TOKENS]
+Input: 3992
+Output: 1628
+Total: 5620
+[Log de Chamadas]: BankToolsB: [executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(DEPOSIT, FG62495S, 1500,00), executeOperation(TAX, FG62495S, 150,00)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsB: [executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(WITHDRAW, BC3456A, 500,00), executeOperation(DEPOSIT, FG62495S, 1500,00), executeOperation(TAX, FG62495S, 150,00)]
+---------------------------------------------------------
+
+--- CONF2: BankToolsB / PROMPT 3 / CENÁRIO A ---
+
+[Execução 1]
+[ToolB] executeOperation(WITHDRAW, AG7340H, 600,00) -> true
+[ToolB] executeOperation(WITHDRAW, TG23986Q, 700,00) -> true
+[ToolB] executeOperation(DEPOSIT, WS2754T, 1300,00) -> true
+[ToolB] executeOperation(PAYMENT, WS2754T, 1200,00) -> true
+: All requested operations were executed successfully, in order:
+- Withdraw 600 from AG7340H: success
+- Withdraw 700 from TG23986Q: success
+- Deposit 1300 into WS2754T: success
+- Payment of 1200 from WS2754T: success
+[TOKENS]
+Input: 2383
+Output: 1811
+Total: 4194
+[Log de Chamadas]: BankToolsB: [executeOperation(WITHDRAW, AG7340H, 600,00), executeOperation(WITHDRAW, TG23986Q, 700,00), executeOperation(DEPOSIT, WS2754T, 1300,00), executeOperation(PAYMENT, WS2754T, 1200,00)]
+
+[Execução 2]
+[ToolB] executeOperation(WITHDRAW, AG7340H, 600,00) -> true
+[ToolB] executeOperation(WITHDRAW, TG23986Q, 700,00) -> true
+[ToolB] executeOperation(DEPOSIT, WS2754T, 1300,00) -> true
+[ToolB] executeOperation(PAYMENT, WS2754T, 1200,00) -> true
+: All operations executed in order:
+
+1) Withdraw 600 from AG7340H: Success
+2) Withdraw 700 from TG23986Q: Success
+3) Deposit 1300 into WS2754T: Success
+4) Payment of 1200 from WS2754T: Success
+
+Outcome: All steps completed successfully.
+[TOKENS]
+Input: 2383
+Output: 1295
+Total: 3678
+[Log de Chamadas]: BankToolsB: [executeOperation(WITHDRAW, AG7340H, 600,00), executeOperation(WITHDRAW, TG23986Q, 700,00), executeOperation(DEPOSIT, WS2754T, 1300,00), executeOperation(PAYMENT, WS2754T, 1200,00)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsB: [executeOperation(WITHDRAW, AG7340H, 600,00), executeOperation(WITHDRAW, TG23986Q, 700,00), executeOperation(DEPOSIT, WS2754T, 1300,00), executeOperation(PAYMENT, WS2754T, 1200,00)]
+---------------------------------------------------------
+
+--- CONF2: BankToolsB / PROMPT 3 / CENÁRIO B ---
+
+[Execução 1]
+[ToolB] executeOperation(WITHDRAW, AG7340H, 600,00) -> true
+[ToolB] executeOperation(WITHDRAW, TG23986Q, 700,00) -> false
+[ToolB] executeOperation(RETURN, AG7340H, 600,00) -> true
+: Execution summary:
+- WITHDRAW 600 from AG7340H: success
+- WITHDRAW 700 from TG23986Q: failed
+- RETURN 600 to AG7340H: success
+
+A withdrawal failed, so no further operations were executed.
+[TOKENS]
+Input: 1815
+Output: 1064
+Total: 2879
+[Log de Chamadas]: BankToolsB: [executeOperation(WITHDRAW, AG7340H, 600,00), executeOperation(WITHDRAW, TG23986Q, 700,00), executeOperation(RETURN, AG7340H, 600,00)]
+
+[Execução 2]
+[ToolB] executeOperation(WITHDRAW, AG7340H, 600,00) -> true
+[ToolB] executeOperation(WITHDRAW, TG23986Q, 700,00) -> false
+[ToolB] executeOperation(RETURN, AG7340H, 600,00) -> true
+: Summary of executed operations:
+- WITHDRAW 600 from AG7340H: Success
+- WITHDRAW 700 from TG23986Q: Failed
+- RETURN 600 to AG7340H: Success
+
+A withdrawal failed, so no further actions were performed.
+[TOKENS]
+Input: 1815
+Output: 1130
+Total: 2945
+[Log de Chamadas]: BankToolsB: [executeOperation(WITHDRAW, AG7340H, 600,00), executeOperation(WITHDRAW, TG23986Q, 700,00), executeOperation(RETURN, AG7340H, 600,00)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsB: [executeOperation(WITHDRAW, AG7340H, 600,00), executeOperation(WITHDRAW, TG23986Q, 700,00), executeOperation(RETURN, AG7340H, 600,00)]
+---------------------------------------------------------
+
+#########################################################
+Iniciando Configuração: CONF3: BankToolsA, BankToolsB
+#########################################################
+
+--- CONF3: BankToolsA, BankToolsB / PROMPT 1 / CENÁRIO A ---
+
+[Execução 1]
+[ToolA] withdraw(BC12345, 1000,00) -> true
+[ToolA] deposit(ND87632, 1000,00) -> true
+[ToolA] taxes(BC12345, 1,50) -> true
+: All requested operations have been executed successfully:
+- Withdraw 1000 from account BC12345: Success
+- Deposit 1000 into account ND87632: Success
+- Charge 1.50 tax from account BC12345: Success
+
+No reversals were necessary.
+[TOKENS]
+Input: 2647
+Output: 1363
+Total: 4010
+[Log de Chamadas]: BankToolsA: [withdraw(BC12345, 1000,00), deposit(ND87632, 1000,00), taxes(BC12345, 1,50)]
+
+[Execução 2]
+[ToolA] withdraw(BC12345, 1000,00) -> true
+[ToolA] deposit(ND87632, 1000,00) -> true
+[ToolA] taxes(BC12345, 1,50) -> true
+: All requested operations have been executed successfully:
+- Withdrew 1000 from account BC12345.
+- Deposited 1000 into account ND87632.
+- Charged 1.50 tax from account BC12345.
+
+No reversals were necessary.
+[TOKENS]
+Input: 2647
+Output: 779
+Total: 3426
+[Log de Chamadas]: BankToolsA: [withdraw(BC12345, 1000,00), deposit(ND87632, 1000,00), taxes(BC12345, 1,50)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsA: [withdraw(BC12345, 1000,00), deposit(ND87632, 1000,00), taxes(BC12345, 1,50)]
+---------------------------------------------------------
+
+--- CONF3: BankToolsA, BankToolsB / PROMPT 1 / CENÁRIO B ---
+
+[Execução 1]
+[ToolA] withdraw(BC12345, 1000,00) -> true
+[ToolA] deposit(ND87632, 1000,00) -> false
+[ToolA] returnValue(BC12345, 1000,00) -> true
+: Summary of operations:
+- Withdraw 1000 from account BC12345: succeeded.
+- Deposit 1000 into account ND87632: failed.
+
+Since one operation failed:
+- Undid the completed operation by returning 1000 to account BC12345: succeeded.
+- No tax was charged.
+- Stopped further execution.
+[TOKENS]
+Input: 2646
+Output: 2403
+Total: 5049
+[Log de Chamadas]: BankToolsA: [withdraw(BC12345, 1000,00), deposit(ND87632, 1000,00), returnValue(BC12345, 1000,00)]
+
+[Execução 2]
+[ToolA] withdraw(BC12345, 1000,00) -> true
+[ToolA] deposit(ND87632, 1000,00) -> false
+[ToolA] returnValue(BC12345, 1000,00) -> true
+: Summary of actions taken:
+- Withdraw 1000 from BC12345: Success.
+- Deposit 1000 into ND87632: Failed.
+- Reverted the successful withdrawal by returning 1000 to BC12345: Success.
+- No tax was charged due to failure in the sequence.
+
+Final state: All changes rolled back; no further actions executed.
+[TOKENS]
+Input: 2646
+Output: 1449
+Total: 4095
+[Log de Chamadas]: BankToolsA: [withdraw(BC12345, 1000,00), deposit(ND87632, 1000,00), returnValue(BC12345, 1000,00)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsA: [withdraw(BC12345, 1000,00), deposit(ND87632, 1000,00), returnValue(BC12345, 1000,00)]
+---------------------------------------------------------
+
+--- CONF3: BankToolsA, BankToolsB / PROMPT 2 / CENÁRIO A ---
+
+[Execução 1]
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] deposit(FG62495S, 2500,00) -> true
+[ToolA] taxes(FG62495S, 250,00) -> true
+: All operations executed in order:
+
+- Withdrawals from BC3456A: 5 successful withdrawals of 500 each (total 2500). No failures encountered.
+- Deposit: 2500 deposited into FG62495S (successful).
+- Tax: 10% of 2500 = 250 charged from FG62495S (successful).
+
+Process completed with no errors.
+[TOKENS]
+Input: 6428
+Output: 1496
+Total: 7924
+[Log de Chamadas]: BankToolsA: [withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), deposit(FG62495S, 2500,00), taxes(FG62495S, 250,00)]
+
+[Execução 2]
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] deposit(FG62495S, 2500,00) -> true
+[ToolA] taxes(FG62495S, 250,00) -> true
+: All operations executed in order:
+
+- Withdrawals from BC3456A: 5 successful withdrawals of 500 each (total 2500).
+- Deposit: 2500 deposited into FG62495S.
+- Tax: 10% of 2500 (250) charged from FG62495S.
+
+Result: All steps completed successfully.
+[TOKENS]
+Input: 6428
+Output: 1803
+Total: 8231
+[Log de Chamadas]: BankToolsA: [withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), deposit(FG62495S, 2500,00), taxes(FG62495S, 250,00)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsA: [withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), deposit(FG62495S, 2500,00), taxes(FG62495S, 250,00)]
+---------------------------------------------------------
+
+--- CONF3: BankToolsA, BankToolsB / PROMPT 2 / CENÁRIO B ---
+
+[Execução 1]
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> false
+[ToolA] deposit(FG62495S, 1500,00) -> true
+[ToolA] taxes(FG62495S, 150,00) -> true
+: Summary of executed operations:
+- Withdrawal 1 from BC3456A for 500: Success
+- Withdrawal 2 from BC3456A for 500: Success
+- Withdrawal 3 from BC3456A for 500: Success
+- Withdrawal 4 from BC3456A for 500: Failed
+Stopped further withdrawals as instructed.
+
+Post-failure actions executed:
+- Deposited 1500 into FG62495S: Success
+- Charged tax of 150 from FG62495S (10% of 1500): Success
+
+No further actions performed.
+[TOKENS]
+Input: 5499
+Output: 1321
+Total: 6820
+[Log de Chamadas]: BankToolsA: [withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), deposit(FG62495S, 1500,00), taxes(FG62495S, 150,00)]
+
+[Execução 2]
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> false
+[ToolA] deposit(FG62495S, 1500,00) -> true
+[ToolA] taxes(FG62495S, 150,00) -> true
+: Operations summary:
+- Withdrawals from BC3456A: 3 succeeded, 1 failed (stopped further withdrawals).
+- Deposited 1500 into FG62495S.
+- Charged tax of 150 from FG62495S (10% of 1500).
+
+All required operations have been executed per instructions.
+[TOKENS]
+Input: 5499
+Output: 1397
+Total: 6896
+[Log de Chamadas]: BankToolsA: [withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), deposit(FG62495S, 1500,00), taxes(FG62495S, 150,00)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsA: [withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), deposit(FG62495S, 1500,00), taxes(FG62495S, 150,00)]
+---------------------------------------------------------
+
+--- CONF3: BankToolsA, BankToolsB / PROMPT 3 / CENÁRIO A ---
+
+[Execução 1]
+[ToolA] withdraw(AG7340H, 600,00) -> true
+[ToolA] withdraw(TG23986Q, 700,00) -> true
+[ToolA] deposit(WS2754T, 1300,00) -> true
+[ToolA] payment(WS2754T, 1200,00) -> true
+: All operations executed successfully:
+- Withdraw 600 from AG7340H: Success
+- Withdraw 700 from TG23986Q: Success
+- Deposit 1300 into WS2754T: Success
+- Payment of 1200 from WS2754T: Success
+[TOKENS]
+Input: 3498
+Output: 2092
+Total: 5590
+[Log de Chamadas]: BankToolsA: [withdraw(AG7340H, 600,00), withdraw(TG23986Q, 700,00), deposit(WS2754T, 1300,00), payment(WS2754T, 1200,00)]
+
+[Execução 2]
+[ToolA] withdraw(AG7340H, 600,00) -> true
+[ToolA] withdraw(TG23986Q, 700,00) -> true
+[ToolA] deposit(WS2754T, 1300,00) -> true
+[ToolA] payment(WS2754T, 1200,00) -> true
+: All requested operations have been executed successfully:
+
+1) Withdraw 600 from account AG7340H: success
+2) Withdraw 700 from account TG23986Q: success
+3) Deposit 1300 into account WS2754T: success
+4) Payment of 1200 from account WS2754T: success
+[TOKENS]
+Input: 3498
+Output: 881
+Total: 4379
+[Log de Chamadas]: BankToolsA: [withdraw(AG7340H, 600,00), withdraw(TG23986Q, 700,00), deposit(WS2754T, 1300,00), payment(WS2754T, 1200,00)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsA: [withdraw(AG7340H, 600,00), withdraw(TG23986Q, 700,00), deposit(WS2754T, 1300,00), payment(WS2754T, 1200,00)]
+---------------------------------------------------------
+
+--- CONF3: BankToolsA, BankToolsB / PROMPT 3 / CENÁRIO B ---
+
+[Execução 1]
+[ToolA] withdraw(AG7340H, 600,00) -> true
+[ToolA] withdraw(TG23986Q, 700,00) -> false
+[ToolA] returnValue(AG7340H, 600,00) -> true
+: Summary of executed operations:
+- Withdraw 600 from account AG7340H: Success
+- Withdraw 700 from account TG23986Q: Failed
+- Return 600 to account AG7340H: Success
+
+A withdrawal failed, so no further operations were performed.
+[TOKENS]
+Input: 2726
+Output: 1554
+Total: 4280
+[Log de Chamadas]: BankToolsA: [withdraw(AG7340H, 600,00), withdraw(TG23986Q, 700,00), returnValue(AG7340H, 600,00)]
+
+[Execução 2]
+[ToolA] withdraw(AG7340H, 600,00) -> true
+[ToolA] withdraw(TG23986Q, 700,00) -> false
+[ToolA] returnValue(AG7340H, 600,00) -> true
+: Summary of executed operations:
+- Withdraw 600 from account AG7340H: Success
+- Withdraw 700 from account TG23986Q: Failed
+- Returned 600 to account AG7340H: Success
+
+A withdrawal failed, so no further actions were taken.
+[TOKENS]
+Input: 2726
+Output: 1426
+Total: 4152
+[Log de Chamadas]: BankToolsA: [withdraw(AG7340H, 600,00), withdraw(TG23986Q, 700,00), returnValue(AG7340H, 600,00)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsA: [withdraw(AG7340H, 600,00), withdraw(TG23986Q, 700,00), returnValue(AG7340H, 600,00)]
+---------------------------------------------------------
+
+#########################################################
+Iniciando Configuração: CONF4: BankToolsB, BankToolsA
+#########################################################
+
+--- CONF4: BankToolsB, BankToolsA / PROMPT 1 / CENÁRIO A ---
+
+[Execução 1]
+[ToolA] withdraw(BC12345, 1000,00) -> true
+[ToolA] deposit(ND87632, 1000,00) -> true
+[ToolA] taxes(BC12345, 1,50) -> true
+: All requested operations have been completed successfully:
+- Withdraw 1000 from account BC12345: Success
+- Deposit 1000 into account ND87632: Success
+- Charge 1.50 from account BC12345: Success
+[TOKENS]
+Input: 2647
+Output: 1355
+Total: 4002
+[Log de Chamadas]: BankToolsA: [withdraw(BC12345, 1000,00), deposit(ND87632, 1000,00), taxes(BC12345, 1,50)]
+
+[Execução 2]
+[ToolA] withdraw(BC12345, 1000,00) -> true
+[ToolA] deposit(ND87632, 1000,00) -> true
+[ToolA] taxes(BC12345, 1,50) -> true
+: All operations completed successfully:
+- Withdraw 1000 from account BC12345: Success
+- Deposit 1000 into account ND87632: Success
+- Charge 1.50 from account BC12345: Success
+[TOKENS]
+Input: 2647
+Output: 642
+Total: 3289
+[Log de Chamadas]: BankToolsA: [withdraw(BC12345, 1000,00), deposit(ND87632, 1000,00), taxes(BC12345, 1,50)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsA: [withdraw(BC12345, 1000,00), deposit(ND87632, 1000,00), taxes(BC12345, 1,50)]
+---------------------------------------------------------
+
+--- CONF4: BankToolsB, BankToolsA / PROMPT 1 / CENÁRIO B ---
+
+[Execução 1]
+[ToolA] withdraw(BC12345, 1000,00) -> true
+[ToolA] deposit(ND87632, 1000,00) -> false
+[ToolA] returnValue(BC12345, 1000,00) -> true
+: Summary of execution:
+- Withdraw 1000 from account BC12345: Success.
+- Deposit 1000 into account ND87632: Failed.
+
+Because one operation failed:
+- Undid the completed operation: Returned 1000 to account BC12345: Success.
+- No tax was charged.
+
+Process stopped after rollback due to failure.
+[TOKENS]
+Input: 2646
+Output: 1567
+Total: 4213
+[Log de Chamadas]: BankToolsA: [withdraw(BC12345, 1000,00), deposit(ND87632, 1000,00), returnValue(BC12345, 1000,00)]
+
+[Execução 2]
+[ToolA] withdraw(BC12345, 1000,00) -> true
+[ToolA] deposit(ND87632, 1000,00) -> false
+[ToolA] returnValue(BC12345, 1000,00) -> true
+: Summary of actions:
+- Withdraw 1000 from account BC12345: Success.
+- Deposit 1000 into account ND87632: Failed.
+- Undo completed operation: Returned 1000 to account BC12345: Success.
+- No tax charged due to failure.
+
+Process stopped after rollback as instructed.
+[TOKENS]
+Input: 2646
+Output: 1567
+Total: 4213
+[Log de Chamadas]: BankToolsA: [withdraw(BC12345, 1000,00), deposit(ND87632, 1000,00), returnValue(BC12345, 1000,00)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsA: [withdraw(BC12345, 1000,00), deposit(ND87632, 1000,00), returnValue(BC12345, 1000,00)]
+---------------------------------------------------------
+
+--- CONF4: BankToolsB, BankToolsA / PROMPT 2 / CENÁRIO A ---
+
+[Execução 1]
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] deposit(FG62495S, 2500,00) -> true
+[ToolA] taxes(FG62495S, 250,00) -> true
+: All operations completed successfully.
+
+- Withdrawals from account BC3456A: 5 withdrawals of 500 each succeeded (total 2500).
+- Deposit into account FG62495S: 2500 succeeded.
+- Tax charged from account FG62495S: 250 (10% of 2500) succeeded.
+
+No further actions required.
+[TOKENS]
+Input: 6428
+Output: 780
+Total: 7208
+[Log de Chamadas]: BankToolsA: [withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), deposit(FG62495S, 2500,00), taxes(FG62495S, 250,00)]
+
+[Execução 2]
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] deposit(FG62495S, 2500,00) -> true
+[ToolA] taxes(FG62495S, 250,00) -> true
+: All operations have been completed successfully:
+- 5 withdrawals of 500 from account BC3456A succeeded (total 2500).
+- Deposited 2500 into account FG62495S.
+- Charged a tax of 250 (10% of 2500) from account FG62495S.
+
+No further actions are required.
+[TOKENS]
+Input: 6428
+Output: 1297
+Total: 7725
+[Log de Chamadas]: BankToolsA: [withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), deposit(FG62495S, 2500,00), taxes(FG62495S, 250,00)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsA: [withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), deposit(FG62495S, 2500,00), taxes(FG62495S, 250,00)]
+---------------------------------------------------------
+
+--- CONF4: BankToolsB, BankToolsA / PROMPT 2 / CENÁRIO B ---
+
+[Execução 1]
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> false
+[ToolA] deposit(FG62495S, 1500,00) -> true
+[ToolA] taxes(FG62495S, 150,00) -> true
+: Summary of operations executed:
+
+- Withdrawal 1 from BC3456A: 500 — Success
+- Withdrawal 2 from BC3456A: 500 — Success
+- Withdrawal 3 from BC3456A: 500 — Success
+- Withdrawal 4 from BC3456A: 500 — Failed
+- Stopped further withdrawals as instructed.
+
+Post-failure actions:
+- Deposited total of successful withdrawals (1500) into FG62495S — Success
+- Charged tax of 10% on deposited amount (150) from FG62495S — Success
+
+All required steps completed.
+[TOKENS]
+Input: 5499
+Output: 1193
+Total: 6692
+[Log de Chamadas]: BankToolsA: [withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), deposit(FG62495S, 1500,00), taxes(FG62495S, 150,00)]
+
+[Execução 2]
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> true
+[ToolA] withdraw(BC3456A, 500,00) -> false
+[ToolA] deposit(FG62495S, 1500,00) -> true
+[ToolA] taxes(FG62495S, 150,00) -> true
+: Summary of executed operations:
+- Withdrawal 1 from BC3456A of 500: Success
+- Withdrawal 2 from BC3456A of 500: Success
+- Withdrawal 3 from BC3456A of 500: Success
+- Withdrawal 4 from BC3456A of 500: Failed
+
+Actions taken after failure:
+- Deposited 1500 into FG62495S: Success
+- Charged tax of 150 from FG62495S (10% of 1500): Success
+
+Per instructions, no further withdrawals were attempted and no additional actions were executed.
+[TOKENS]
+Input: 5499
+Output: 1318
+Total: 6817
+[Log de Chamadas]: BankToolsA: [withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), deposit(FG62495S, 1500,00), taxes(FG62495S, 150,00)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsA: [withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), withdraw(BC3456A, 500,00), deposit(FG62495S, 1500,00), taxes(FG62495S, 150,00)]
+---------------------------------------------------------
+
+--- CONF4: BankToolsB, BankToolsA / PROMPT 3 / CENÁRIO A ---
+
+[Execução 1]
+[ToolA] withdraw(AG7340H, 600,00) -> true
+[ToolA] withdraw(TG23986Q, 700,00) -> true
+[ToolA] deposit(WS2754T, 1300,00) -> true
+[ToolA] payment(WS2754T, 1200,00) -> true
+: All operations executed successfully:
+- Withdraw 600 from AG7340H: Success
+- Withdraw 700 from TG23986Q: Success
+- Deposit 1300 into WS2754T: Success
+- Payment of 1200 from WS2754T: Success
+[TOKENS]
+Input: 3498
+Output: 1004
+Total: 4502
+[Log de Chamadas]: BankToolsA: [withdraw(AG7340H, 600,00), withdraw(TG23986Q, 700,00), deposit(WS2754T, 1300,00), payment(WS2754T, 1200,00)]
+
+[Execução 2]
+[ToolA] withdraw(AG7340H, 600,00) -> true
+[ToolA] withdraw(TG23986Q, 700,00) -> true
+[ToolA] deposit(WS2754T, 1300,00) -> true
+[ToolA] payment(WS2754T, 1200,00) -> true
+: All operations completed successfully:
+- Withdrawn 600 from AG7340H.
+- Withdrawn 700 from TG23986Q.
+- Deposited 1300 into WS2754T.
+- Performed a payment of 1200 from WS2754T.
+[TOKENS]
+Input: 3498
+Output: 811
+Total: 4309
+[Log de Chamadas]: BankToolsA: [withdraw(AG7340H, 600,00), withdraw(TG23986Q, 700,00), deposit(WS2754T, 1300,00), payment(WS2754T, 1200,00)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsA: [withdraw(AG7340H, 600,00), withdraw(TG23986Q, 700,00), deposit(WS2754T, 1300,00), payment(WS2754T, 1200,00)]
+---------------------------------------------------------
+
+--- CONF4: BankToolsB, BankToolsA / PROMPT 3 / CENÁRIO B ---
+
+[Execução 1]
+[ToolA] withdraw(AG7340H, 600,00) -> true
+[ToolA] withdraw(TG23986Q, 700,00) -> false
+[ToolA] returnValue(AG7340H, 600,00) -> true
+: Summary of operations:
+- Withdraw 600 from AG7340H: Success
+- Withdraw 700 from TG23986Q: Failed
+- Return 600 to AG7340H: Success
+
+Per instructions, stopped after returning funds due to the failed withdrawal. No further actions executed.
+[TOKENS]
+Input: 2726
+Output: 1493
+Total: 4219
+[Log de Chamadas]: BankToolsA: [withdraw(AG7340H, 600,00), withdraw(TG23986Q, 700,00), returnValue(AG7340H, 600,00)]
+
+[Execução 2]
+[ToolA] withdraw(AG7340H, 600,00) -> true
+[ToolA] withdraw(TG23986Q, 700,00) -> false
+[ToolA] returnValue(AG7340H, 600,00) -> true
+: Summary of operations:
+- Withdraw 600 from account AG7340H: Success
+- Withdraw 700 from account TG23986Q: Failed
+- Returned 600 to account AG7340H due to a failed subsequent withdrawal: Success
+
+Per instructions, stopped further actions after the failed withdrawal.
+[TOKENS]
+Input: 2726
+Output: 919
+Total: 3645
+[Log de Chamadas]: BankToolsA: [withdraw(AG7340H, 600,00), withdraw(TG23986Q, 700,00), returnValue(AG7340H, 600,00)]
+
+---------------------------------------------------------
+
+CORRETUDE: 2/2 execuções corretas.
+CONSISTÊNCIA E ABORDAGEM:
+  - - (CORRETO)
+    Log: BankToolsA: [withdraw(AG7340H, 600,00), withdraw(TG23986Q, 700,00), returnValue(AG7340H, 600,00)]
+---------------------------------------------------------
+
+=========================================================
+--- Bateria de testes concluída. ---
+=========================================================
+
+Process finished with exit code 0
