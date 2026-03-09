@@ -129,3 +129,12 @@ If any withdrawal fails:
 The expected Behavior with BankToolsA for Scenario 3.A is: Withdraw(AG7340H, 600), Withdraw(TG23986Q, 700), Deposit(WS2754T, 1300), and Payment(WS2754T, 1200). The expected Behavior for Scenario 3.B is: Withdraw(AG7340H, 600), Withdraw(TG23986Q, 700) (Failure), and ReturnValue(AG7340H, 600).
 
 The expected Behavior with BankToolsB for Scenario 3.A is: executeOperation(WITHDRAW, AG7340H, 600), executeOperation(WITHDRAW, TG23986Q, 700), executeOperation(DEPOSIT, WS2754T, 1300), and executeOperation(PAYMENT, WS2754T, 1200). The expected Behavior for Scenario 3.B is: executeOperation(WITHDRAW, AG7340H, 600), executeOperation(WITHDRAW, TG23986Q, 700) (Failure), and executeOperation(RETURN, AG7340H, 600).
+
+## Files Available
+
+The code and result logs are available for download. 
+
+- cloud_models - Code used for cloud models.
+- local_models - Code used for Ollama Integration
+- cloud_models_token_consumption - Code used for cloud models for token consumption verification.
+- TXT Files - Logs for executions performed for both models and token consumption.
