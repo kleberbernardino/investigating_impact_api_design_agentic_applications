@@ -137,4 +137,4 @@ The code and result logs are available for download.
 - cloud_models - Code used for cloud models.
 - local_models - Code used for Ollama Integration
 - cloud_models_token_consumption - Code used for cloud models for token consumption verification.
-- TXT Files - Logs for executions performed for both models and token consumption.
+- Logs - Results - Logs for executions performed for both models and token consumption.
